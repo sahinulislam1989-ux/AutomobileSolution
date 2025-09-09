@@ -1,142 +1,37 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automobile Solution</title>
   <style>
-    :root{
-      --brand:#001f3f;
-      --accent:#0073e6;
-      --btn-green:#28a745;
-      --fb-blue:#1877f2;
-      --map-red:#ff4136;
-      --card-bg:#fff;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: Arial, sans-serif;
-      margin:0;
-      background:#f4f4f9;
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-    }
-
-    /* header */
-    header.site-header{
-      background:var(--brand);
-      color:#fff;
-      padding:12px 16px;
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-    header .logo{
-      width:64px;
-      height:64px;
-      object-fit:contain;
-      border-radius:8px;
-      background:#fff;
-      padding:4px;
-    }
-    header .title{
-      font-size:22px;
-      font-weight:700;
-    }
-    header .tag{
-      font-size:14px;
-      opacity:0.9;
-      margin-top:4px;
-      color:#e6eefc;
-    }
-
-    .wrap{
-      width:92%;
-      max-width:1100px;
-      margin:18px auto;
-    }
-
-    h2.section-title{
-      text-align:center;
-      color:var(--brand);
-      margin:26px 0 14px;
-      font-size:20px;
-    }
-
-    .grid{
-      display:grid;
-      gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .card{
-      background:var(--card-bg);
-      padding:16px;
-      border-radius:10px;
-      box-shadow: 0 6px 14px rgba(16,24,40,0.06);
-      border:1px solid rgba(0,0,0,0.03);
-      text-align:center;
-    }
-    .card img.logo{
-      width:80px;
-      height:80px;
-      object-fit:contain;
-      margin-bottom:8px;
-    }
-    .card h3{ 
-      margin:0 0 8px; 
-      color:var(--accent); 
-      font-size:18px; 
-    }
-    .card p{ margin:6px 0; line-height:1.45; font-size:14px; }
-    .services-list{ padding-left:18px; margin:8px 0; text-align:left; }
-    .services-list li{ margin:6px 0; }
-
-    .buttons{
-      margin-top:10px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    .btn{
-      text-decoration:none;
-      color:#fff;
-      padding:8px 12px;
-      border-radius:6px;
-      font-weight:600;
-      font-size:14px;
-      display:inline-block;
-    }
-    .btn.fb{ background:var(--fb-blue); }
-    .btn.map{ background:var(--map-red); }
-    .btn.call{ background:var(--btn-green); }
-
-    footer{
-      margin-top:26px;
-      padding:18px 10px;
-      text-align:center;
-      color:#fff;
-      background:#222;
-    }
-
-    /* small screens */
-    @media (max-width:420px){
-      header .title{ font-size:18px; }
-      header .tag{ display:none; }
-      .btn{ font-size:13px; padding:7px 10px; }
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    header { background: #222; color: #fff; padding: 15px; text-align: center; }
+    header img { height: 60px; }
+    .tag { font-size: 14px; color: #ddd; }
+    main { padding: 20px; }
+    h2.section-title { margin-top: 30px; color: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+    .card img { height: 50px; }
+    .card p { margin: 5px 0; }
+    .services-list { margin: 10px 0; padding-left: 20px; }
+    .buttons { margin-top: 10px; }
+    .btn { display: inline-block; padding: 8px 12px; margin: 5px; border-radius: 5px; text-decoration: none; color: white; font-size: 14px; }
+    .btn.map { background: #e74c3c; }
+    .btn.fb { background: #3498db; }
+    .btn.call { background: #27ae60; }
+    footer { background: #222; color: #fff; text-align: center; padding: 10px; margin-top: 30px; }
   </style>
 </head>
 <body>
 
-  <!-- header -->
+  <!-- Header -->
   <header class="site-header">
-    <img src="images/solution.jpeg"alt="Automobile Solution Logo" class="logo">
-    <div>
-      <div class="title">🚗 Automobile Solution</div>
-      <div class="tag">Multiple workshops — Ready to serve</div>
-    </div>
+    <img src="images/solution.jpeg" alt="Automobile Solution Logo" class="logo">
+    <div><h1>🚗 Automobile Solution</h1></div>
+    <div class="tag">Multiple workshops — Ready to serve</div>
   </header>
 
   <main class="wrap">
@@ -146,8 +41,7 @@
       
       <!-- HRH Automobiles -->
       <article class="card">
-        <img src="images/hrh.png.jpeg" alt="HRH Logo" class="logo">
-        <h3>HRH Automobiles</h3>
+        <h3><img src="images/hrh.jpeg" alt="HRH Logo"> HRH Automobiles</h3>
         <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলগাঁও/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-1229</p>
         <p><strong>ফোন:</strong> 01970-138816, 01917-360011</p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
@@ -169,8 +63,7 @@
 
       <!-- PHP Automobile LTD -->
       <article class="card">
-        <img src="images/php.jpeg" alt="PHP Logo" class="logo">
-        <h3>PHP Automobile LTD</h3>
+        <h3><img src="images/php.jpeg" alt="PHP Logo"> PHP Automobile LTD</h3>
         <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-1212</p>
         <p><strong>ফোন:</strong> 01708-689294</p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
@@ -191,8 +84,7 @@
 
       <!-- Ms. Mayer Doa Rohiz -->
       <article class="card">
-        <img src="images/doa.jpeg" alt="Doa Logo" class="logo">
-        <h3>Ms. Mayer Doa Rohiz</h3>
+        <h3><img src="images/doa.jpeg" alt="Doa Logo"> Ms. Mayer Doa Rohiz</h3>
         <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
         <p><strong>ফোন:</strong> 01767-468755</p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
@@ -216,8 +108,7 @@
     <div class="grid">
       <!-- Bahon Sheba -->
       <article class="card">
-        <img src="images/bahon.jpeg" alt="Bahon Logo" class="logo">
-        <h3>Bahon Sheba</h3>
+        <h3><img src="images/bahon.jpeg" alt="Bahon Logo"> Bahon Sheba</h3>
         <p><strong>ঠিকানা:</strong> বেরুলিয়া, মিরপুর রোড, ঢাকা</p>
         <p><strong>ফোন:</strong> 01723-818338</p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
@@ -238,5 +129,6 @@
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
+
 </body>
 </html>
