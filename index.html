@@ -7,95 +7,99 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f2f2f2;
+      background: #f5f7fa;
       margin: 0;
       padding: 0;
     }
     header {
-      background: #2c3e50;
-      color: white;
-      padding: 15px;
+      background: #001f3f;
+      color: #fff;
+      padding: 20px;
       text-align: center;
     }
-    .workshop {
-      background: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-      max-width: 600px;
+    h1 {
+      margin: 0;
     }
-    h2 {
-      color: #333;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #0074D9;
+    }
+    .card p {
+      margin: 5px 0;
     }
     ul {
-      list-style-type: square;
-      margin-left: 20px;
+      padding-left: 18px;
     }
-    .location {
+    .btn {
+      display: inline-block;
       margin-top: 10px;
-    }
-    .location a {
-      background: #27ae60;
-      color: white;
       padding: 8px 12px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .location a:hover {
-      background: #219150;
-    }
-    footer {
-      text-align: center;
-      background: #2c3e50;
+      background: #2ECC40;
       color: white;
-      padding: 10px;
-      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      background: #27ae60;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🚗 Automobile Solution</h1>
-    <p>আপনার গাড়ির সমস্যার সঠিক সমাধান</p>
+    <p>আপনার নিকটস্থ গাড়ির ওয়ার্কশপ ও সার্ভিস সেন্টার</p>
   </header>
 
-  <!-- ওয়ার্কশপ ১ -->
-  <div class="workshop">
-    <h2>🔧 Rahim Auto Workshop</h2>
-    <p><strong>ঠিকানা:</strong> মিরপুর-১০, ঢাকা</p>
-    <p><strong>ফোন:</strong> 017XXXXXXXX</p>
-    <h3>সার্ভিস সমূহ:</h3>
-    <ul>
-      <li>ইঞ্জিন রিপেয়ার</li>
-      <li>ব্রেক সার্ভিস</li>
-      <li>টায়ার পরিবর্তন</li>
-      <li>অয়েল চেঞ্জ</li>
-    </ul>
-    <div class="location">
-      <a href="https://goo.gl/maps/xxxx" target="_blank">📍 লোকেশন দেখুন</a>
+  <div class="container">
+    <!-- ওয়ার্কশপ ১ -->
+    <div class="card">
+      <h2>🔧 Rahim Auto Workshop</h2>
+      <p><b>ঠিকানা:</b> মিরপুর, ঢাকা</p>
+      <p><b>ফোন:</b> 017XXXXXXXX</p>
+      <h3>সার্ভিস সমূহ:</h3>
+      <ul>
+        <li>ইঞ্জিন মেরামত</li>
+        <li>গিয়ার বক্স মেরামত</li>
+        <li>সাসপেনশন সার্ভিস</li>
+        <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+        <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
+        <li>পেইন্ট ও বডি ওয়ার্ক</li>
+        <li>কার ওয়াশ</li>
+        <li>ব্রেক সিস্টেম সার্ভিস</li>
+      </ul>
+      <a href="https://www.facebook.com/yourpage" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
+
+    <!-- ওয়ার্কশপ ২ -->
+    <div class="card">
+      <h2>🔧 Karim Car Service</h2>
+      <p><b>ঠিকানা:</b> উত্তরা, ঢাকা</p>
+      <p><b>ফোন:</b> 018XXXXXXXX</p>
+      <h3>সার্ভিস সমূহ:</h3>
+      <ul>
+        <li>ইঞ্জিন মেরামত</li>
+        <li>গিয়ার বক্স মেরামত</li>
+        <li>সাসপেনশন সার্ভিস</li>
+        <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+        <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
+        <li>পেইন্ট ও বডি ওয়ার্ক</li>
+        <li>কার ওয়াশ</li>
+        <li>ব্রেক সিস্টেম সার্ভিস</li>
+      </ul>
+      <a href="https://www.facebook.com/yourpage" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
     </div>
   </div>
-
-  <!-- ওয়ার্কশপ ২ -->
-  <div class="workshop">
-    <h2>🔧 Karim Car Service</h2>
-    <p><strong>ঠিকানা:</strong> চট্টগ্রাম সিটি, আগ্রাবাদ</p>
-    <p><strong>ফোন:</strong> 018XXXXXXXX</p>
-    <h3>সার্ভিস সমূহ:</h3>
-    <ul>
-      <li>এসি সার্ভিসিং</li>
-      <li>ইলেকট্রিক্যাল কাজ</li>
-      <li>ব্যাটারি চেক</li>
-      <li>কার ওয়াশ</li>
-    </ul>
-    <div class="location">
-      <a href="https://goo.gl/maps/yyyy" target="_blank">📍 লোকেশন দেখুন</a>
-    </div>
-  </div>
-
-  <footer>
-    <p>© 2025 Automobile Solution | All Rights Reserved</p>
-  </footer>
 </body>
 </html>
