@@ -1,12 +1,5 @@
-<h2>আমাদের পার্টনার লোগো</h2>
-<div style="display:flex; gap:20px; flex-wrap:wrap;">
-  <img src="solution.png.jpeg" alt="Automobile Solution Logo" width="150">
-  <img src="hrh.png.jpeg" alt="HRH Automobiles Logo" width="150">
-  <img src="doa.png.jpeg" alt="Ms. Mayer Doa Rohiz Logo" width="150">
-  <img src="bahon.png.jpeg" alt="Bahon Sheba Logo" width="150">
-</div>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,24 +45,20 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
-    .buttons {
-      margin-top: 20px;
+    .btns {
+      margin-top: 15px;
     }
-    .buttons a {
+    .btns a {
       display: inline-block;
       margin: 5px;
-      padding: 10px 20px;
+      padding: 10px 15px;
       color: white;
+      background: #007BFF;
       text-decoration: none;
       border-radius: 5px;
-      font-weight: bold;
     }
-    .google {
-      background: #db4437; /* Red */
-    }
-    .facebook {
-      background: #4267B2; /* Blue */
-    }
+    .btns a.google { background: #d9534f; }
+    .btns a.facebook { background: #3b5998; }
     footer {
       background: #222;
       color: white;
@@ -81,21 +70,34 @@
 <body>
   <!-- Header Section -->
   <header>
-    <img src="images/solution.png" alt="Automobile Solution Logo">
+    <img src="./solution.png.jpeg" alt="Automobile Solution Logo">
     <h1>Automobile Solution</h1>
   </header>
 
   <!-- Main Content -->
   <div class="container">
-    <h2>Welcome to Automobile Solution</h2>
-    <p>We provide the best automobile services with trust and reliability.</p>
+    <h2>স্বাগতম Automobile Solution এ</h2>
+    <p>আমরা আপনাকে দিচ্ছি বিশ্বস্ত ও নির্ভরযোগ্য গাড়ি সেবা।</p>
 
     <!-- Images Section -->
     <div class="images">
-      <img src="images/bahon.png" alt="Bahon Vehicle">
-      <img src="images/doa.png" alt="Doa Vehicle">
-      <img src="images/hrh.png" alt="HRH Vehicle">
+      <img src="./bahon.png.jpeg" alt="Bahon Service">
+      <img src="./doa.png.jpeg" alt="Doa Automobiles">
+      <img src="./hrh.png.jpeg" alt="HRH Automobiles">
     </div>
 
     <!-- Buttons -->
-    <div class="buttons">
+    <div class="btns">
+      <a href="https://maps.google.com/?q=Dhaka,Bangladesh" target="_blank" class="google">Google Map</a>
+      <a href="https://facebook.com/yourpage" target="_blank" class="facebook">Facebook</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>📍 ঠিকানা: আপনার কোম্পানির ঠিকানা এখানে লিখুন</p>
+    <p>📞 যোগাযোগ: +8801XXXXXXXXX</p>
+    <p>&copy; 2025 Automobile Solution</p>
+  </footer>
+</body>
+</html>
