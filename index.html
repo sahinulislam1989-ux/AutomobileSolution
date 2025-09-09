@@ -119,7 +119,211 @@
 <body>
 
   <!-- Header (লোগো বসানোর জায়গা) -->
+  <header class="site-heade<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automobile Solution</title>
+  <style>
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+      --btn-green:#28a745;
+      --fb-blue:#1877f2;
+      --map-red:#ff4136;
+      --card-bg:#fff;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      background:#f4f4f9;
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    /* header with logo */
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    header .logo{
+      width:64px;
+      height:64px;
+      object-fit:contain;
+      border-radius:8px;
+      background:rgba(255,255,255,0.03);
+    }
+    header .title{
+      font-size:20px;
+      font-weight:700;
+    }
+    header .tag{
+      font-size:13px;
+      opacity:0.9;
+      margin-top:4px;
+      color:#e6eefc;
+    }
+
+    .wrap{
+      width:92%;
+      max-width:1100px;
+      margin:18px auto;
+    }
+
+    h2.section-title{
+      text-align:center;
+      color:var(--brand);
+      margin:26px 0 14px;
+      font-size:20px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card{
+      background:var(--card-bg);
+      padding:16px;
+      border-radius:10px;
+      box-shadow: 0 6px 14px rgba(16,24,40,0.06);
+      border:1px solid rgba(0,0,0,0.03);
+    }
+    .card h3{ margin:0 0 6px; color:var(--accent); display:flex; align-items:center; gap:8px; }
+    .card h3 img{ width:36px; height:36px; object-fit:contain; border-radius:6px; }
+    .card p{ margin:6px 0; line-height:1.45; font-size:14px; }
+    .services-list{ padding-left:18px; margin:8px 0; }
+    .services-list li{ margin:6px 0; }
+
+    .buttons{
+      margin-top:10px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      text-decoration:none;
+      color:#fff;
+      padding:8px 12px;
+      border-radius:6px;
+      font-weight:600;
+      font-size:14px;
+      display:inline-block;
+    }
+    .btn.fb{ background:var(--fb-blue); }
+    .btn.map{ background:var(--map-red); }
+    .btn.call{ background:var(--btn-green); }
+
+    footer{
+      margin-top:26px;
+      padding:18px 10px;
+      text-align:center;
+      color:#fff;
+      background:#222;
+    }
+
+    /* small screens */
+    @media (max-width:420px){
+      header .title{ font-size:18px; }
+      header .tag{ display:none; }
+      .btn{ font-size:13px; padding:7px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header (লোগো বসানোর জায়গা) -->
   <header class="site-header">
+    <img class="logo" src="logo.png" alt="Logo (upload logo.png to repo root)">
+    <div>
+      <div class="title">🚗 Automobile Solution</div>
+      <div class="tag">Multiple workshops — Ready to serve</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Light Vehicle -->
+    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
+    <div class="grid">
+      <!-- HRH Automobiles -->
+      <article class="card">
+        <h3>🔧 HRH Automobiles</h3>
+        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলগাওয়া/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-1229</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801970138816">01970-138816</a>, <a class="btn call" href="tel:+8801917360011">01917-360011</a></p>
+        <p><strong>সার্ভিস সমূহ:</strong></p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সিস্টেম সার্ভিস</li>
+          <li>গিয়ার বক্স মেরামত</li>
+          <li>এয়ার কন্ডিশন রিপেয়ার</li>
+          <li>কার ওয়াশ</li>
+          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+          <li>ব্রেক বুস্টার রিপেয়ার</li>
+          <li>বডি ড্রেন প্যান চেঞ্জ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank" rel="noopener">🌐 Facebook</a>
+        </div>
+      </article>
+
+      <!-- PHP Automobile LTD -->
+      <article class="card">
+        <h3>🔧 PHP Automobile LTD</h3>
+        <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-1212</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801708689294">01708-689294</a></p>
+        <p><strong>সার্ভিস সমূহ:</strong></p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সিস্টেম সার্ভিস</li>
+          <li>গিয়ার বক্স মেরামত</li>
+          <li>কার ওয়াশ</li>
+          <li>ইঞ্জিন টিউনআপ</li>
+          <li>এয়ার কন্ডিশন রিপেয়ার</li>
+          <li>অয়েল ফিল্টার চেঞ্জ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank" rel="noopener">🌐 Facebook</a>
+        </div>
+      </article>
+
+      <!-- Ms. Mayer Doa Rohiz -->
+      <article class="card">
+        <h3>🔧 Ms. Mayer Doa Rohiz</h3>
+        <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801767468755">01767-468755</a></p>
+        <p><strong>সার্ভিস সমূহ:</strong></p>
+        <ul class="services-list">
+          <li>ডিজেল ইঞ্জিন রিপেয়ার</li>
+          <li>ক্লাচ ও গিয়ার সার্ভিস</li>
+          <li>গিয়ার বক্স মেরামত</li>
+          <li>বডি ড্রেন প্যান চেঞ্জ</li>
+          <li>সাসপেনশন চেক</li>
+          <li>কার ওয়াশ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank" rel="noopener">🌐 Facebook</a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Heavy Vehicle -->
+    <h2 class="section-title">🚛 Heavy Vehicle Workshops</h2>
+    <div class="grid">
+      <!-- Bahon Sheba with logo -->
+      <article class="card">
+        <h3><img src="images/bahon.png" alt="Bahon Sheba Logo"> Bahon Sheba</h3>
+        <p><strong>ঠিকানা:</strong> বেরুলিয়া, মিরপুর রোড, ঢাকা</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801723818338">01723-818338</a>, <a class="btn call" hrefr">
     <img class="logo" src="logo.png" alt="Logo (upload logo.png to repo root)">
     <div>
       <div class="title">🚗 Automobile Solution</div>
