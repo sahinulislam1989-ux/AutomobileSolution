@@ -7,9 +7,10 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
       margin: 0;
       padding: 0;
+      background: #f5f7fa;
+      color: #333;
     }
     header {
       background: #001f3f;
@@ -19,6 +20,11 @@
     }
     h1 {
       margin: 0;
+    }
+    h2 {
+      margin-top: 40px;
+      text-align: center;
+      color: #001f3f;
     }
     .container {
       display: grid;
@@ -32,7 +38,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .card h2 {
+    .card h3 {
       margin-top: 0;
       color: #0074D9;
     }
@@ -54,95 +60,6 @@
     .btn:hover {
       background: #27ae60;
     }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🚗 Automobile Solution</h1>
-    <p>Different Service Center</p>
-  </header>
-
-  <div class="container">
-    <!-- ওয়ার্কশপ ১ -->
-    <div class="card">
-      <h2>🔧HRH Automobiles</h2>
-      <p><b>Address:</b> Ka-20/1-A,kuratoli,khilket (beside kuril flyover-300Ft),khilket, dhaka-1229</p>
-      <p><b>Mobile Nomber</b> 01970-138816, 01917-360011</p>
-      <h3>সার্ভিস সমূহ:</h3>
-      <ul>
-        <li>ইঞ্জিন মেরামত</li>
-        <li>ব্রেক সিস্টেম সার্ভিস</li>
-        <li>গিয়ার বক্স মেরামত</li>
-        <li>সাসপেনশন সার্ভিস</li>
-        <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-        <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
-        <li>পেইন্ট ও বডি ওয়ার্ক</li>
-        <li>কার ওয়াশ</li>
-        
-      </ul>
-      <a href="https://www.facebook.com/share/16uU7fCKUK/="_blank" class="btn">📍 লোকেশন দেখুন</a>
-    </div>https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8?g_st=aw
-
-    <!-- ওয়ার্কশপ ২ -->
-    <div class="card">
-      <h2>🔧 Karim Car Service</h2>
-      <p><b>ঠিকানা:</b> উত্তরা, ঢাকা</p>
-      <p><b>ফোন:</b> 018XXXXXXXX</p>
-      <h3>সার্ভিস সমূহ:</h3>
-      <ul>
-        <li>ইঞ্জিন মেরামত</li>
-        <li>গিয়ার বক্স মেরামত</li>
-        <li>সাসপেনশন সার্ভিস</li>
-        <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-        <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
-        <li>পেইন্ট ও বডি ওয়ার্ক</li>
-        <li>কার ওয়াশ</li>
-        <li>ব্রেক সিস্টেম সার্ভিস</li>
-      </ul>
-      <a href="https://www.facebook.com/yourpage" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
-    </div>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automobile Solution</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    section {
-      padding: 20px;
-    }
-    h2 {
-      color: #444;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-    ul li {
-      margin: 6px 0;
-    }
     footer {
       background: #222;
       color: #fff;
@@ -150,52 +67,87 @@
       padding: 10px;
       margin-top: 20px;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Automobile Solution</h1>
+    <h1>🚗 Automobile Solution</h1>
     <p>Trusted choice for all car solutions</p>
   </header>
 
-  <section>
-    <h2>আমাদের ঠিকানা</h2>
-    <p>📍 বসুন্ধরা আবাসিক এলাকা, ঢাকা</p>
-    <p>📞 ০১৭XXXXXXXX</p>
-  </section>
+  <!-- Light Vehicle Section -->
+  <h2>🚙 Light Vehicle Workshops</h2>
+  <div class="container">
+    <div class="card">
+      <h3>🔧 HRH Automobiles</h3>
+      <p><b>ঠিকানা:</b> Ka-20/1-A, Kuratoli, Khilket, Dhaka</p>
+      <p><b>ফোন:</b> 01970-138816</p>
+      <h4>সার্ভিস সমূহ:</h4>
+      <ul>
+        <li>ইঞ্জিন মেরামত</li>
+        <li>ব্রেক সিস্টেম সার্ভিস</li>
+        <li>গিয়ার বক্স মেরামত</li>
+        <li>কার ওয়াশ</li>
+      </ul>
+      <a href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8?g_st=aw" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
 
-  <section>
-    <h2>আমাদের সেবা সমূহ</h2>
-    <ul>
-      <li>ইঞ্জিন মেরামত</li>
-      <li>গিয়ার বক্স মেরামত</li>
-      <li>সাসপেনশন সার্ভিস</li>
-      <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-      <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
-      <li>পেইন্ট ও বডি ওয়ার্ক</li>
-      <li>কার ওয়াশ</li>
-      <li>ব্রেক সিস্টেম সার্ভিস</li>
-    </ul>
-  </section>
+    <div class="card">
+      <h3>🔧 Karim Car Service</h3>
+      <p><b>ঠিকানা:</b> Uttara, Dhaka</p>
+      <p><b>ফোন:</b> 018XXXXXXXX</p>
+      <h4>সার্ভিস সমূহ:</h4>
+      <ul>
+        <li>সাসপেনশন সার্ভিস</li>
+        <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+        <li>পেইন্ট ও বডি ওয়ার্ক</li>
+        <li>কার ওয়াশ</li>
+      </ul>
+      <a href="https://maps.google.com/" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
 
-  <section>
-    <h2>যোগাযোগ করুন</h2>
-    <p>📞 মোবাইল: <a href="tel:+88017XXXXXXXX">+88017XXXXXXXX</a></p>
-    <p>✉️ ইমেইল: <a href="mailto:info@automobilesolution.com">info@automobilesolution.com</a></p>
-    <p>🌐 ফেসবুক: <a href="https://facebook.com/" target="_blank">আমাদের ফেসবুক পেজ</a></p>
-  </section>
+    <div class="card">
+      <h3>🔧 City Auto Care</h3>
+      <p><b>ঠিকানা:</b> Mirpur, Dhaka</p>
+      <p><b>ফোন:</b> 017XXXXXXXX</p>
+      <h4>সার্ভিস সমূহ:</h4>
+      <ul>
+        <li>ব্রেক বুস্টার রিপ্লেসমেন্ট</li>
+        <li>ইঞ্জিন টিউনিং</li>
+        <li>কার ওয়াশ</li>
+        <li>এয়ার কন্ডিশন সার্ভিস</li>
+      </ul>
+      <a href="https://maps.google.com/" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
+  </div>
 
-  <footer>
-    <p>© 2025 Automobile Solution | All rights reserved</p>
-  </footer>
+  <!-- Heavy Vehicle Section -->
+  <h2>🚛 Heavy Vehicle Workshops</h2>
+  <div class="container">
+    <div class="card">
+      <h3>🔧 BRTC Heavy Workshop</h3>
+      <p><b>ঠিকানা:</b> Gazipur, Dhaka</p>
+      <p><b>ফোন:</b> 016XXXXXXXX</p>
+      <h4>সার্ভিস সমূহ:</h4>
+      <ul>
+        <li>ইঞ্জিন ওভারহল</li>
+        <li>হেভি ব্রেক সিস্টেম সার্ভিস</li>
+        <li>বডি রিপেয়ার</li>
+      </ul>
+      <a href="https://maps.google.com/" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
 
-</body>
-</html>
+    <div class="card">
+      <h3>🔧 National Bus Workshop</h3>
+      <p><b>ঠিকানা:</b> Savar, Dhaka</p>
+      <p><b>ফোন:</b> 015XXXXXXXX</p>
+      <h4>সার্ভিস সমূহ:</h4>
+      <ul>
+        <li>ডিজেল ইঞ্জিন মেরামত</li>
+        <li>হেভি সাসপেনশন সার্ভিস</li>
+        <li>টায়ার ও চাকা সার্ভিস</li>
+      </ul>
+      <a href="https://maps.google.com/" target="_blank" class="btn">📍 লোকেশন দেখুন</a>
+    </div>
+
+    <div …
