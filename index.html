@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Automobile Solution</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001f3f">
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #222; color: #fff; padding: 15px; text-align: center; }
-    header img { height: 60px; }
-    .tag { font-size: 14px; color: #ddd; }
-    main { padding: 20px; }
-    h2.section-title { margin-top: 30px; color: #333; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
-    .card img { height: 50px; }
-    .card p { margin: 5px 0; }
-    .services-list { margin: 10px 0; padding-left: 20px; }
-    .buttons { margin-top: 10px; }
-    .btn { display: inline-block; padding: 8px 12px; margin: 5px; border-radius: 5px; text-decoration: none; color: white; font-size: 14px; }
-    .btn.map { background: #e74c3c; }
-    .btn.fb { background: #3498db; }
-    .btn.call { background: #27ae60; }
-    footer { background: #222; color: #fff; text-align: center; padding: 10px; margin-top: 30px; }
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+      --fb:#1877f2;
+      --map:#e74c3c;
+      --pdf:#8e44ad;
+      --call:#28a745;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    header .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+    .wrap{width:92%; max-width:1100px; margin:20px auto;}
+    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
+    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03);}
+    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
+    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
+    .card p{margin:6px 0; font-size:14px;}
+    .services-list{padding-left:18px; margin:8px 0;}
+    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
+    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
+    .btn.map{background:var(--map);}
+    .btn.fb{background:var(--fb);}
+    .btn.call{background:var(--call);}
+    .btn.pdf{background:var(--pdf);}
+
+    /* SOS bar */
+    #sos{position:sticky; top:0; z-index:9999; background:#111; color:#fff; padding:10px; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    #sos button{border:0; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer;}
+
+    /* small layout */
+    section{padding:18px; margin-top:20px; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06);}
+    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222;}
+
+    @media (max-width:420px){
+      header {padding:12px;}
+      .btn{font-size:13px; padding:7px 10px;}
+    }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header">
-    <img src="solution.jpeg" alt="Automobile Solution Logo" style="width:220px;height:auto;">
-    <div><h1>🚗 Automobile Solution</h1></div>
-    <div class="tag">Multiple workshops — Ready to serve</div>
+  <header>
+    <img src="images/solution.jpeg" alt="Automobile Solution Logo">
+    <div>
+      <div class="title">🚗 Automobile Solution</div>
+      <div class="tag">Multiple workshops — Ready to serve</div>
+    </div>
   </header>
 
+  <!-- SOS Bar -->
+  <div id="sos">
+    🚨 জরুরি সাহায্য লাগবে?
+    <button id="sos-call" style="background:#e11;color:#fff">📞 কল করুন</button>
+    <button id="sos-wa" style="background:#25D366;color:#fff">🟢 WhatsApp SOS</button>
+  </div>
+
   <main class="wrap">
+
     <!-- Light Vehicle -->
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
     <div class="grid">
-      
+
       <!-- HRH Automobiles -->
       <article class="card">
-        <h3><img src="hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
+        <h3><img src="images/hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
         <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলগাঁও/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-1229</p>
-        <p><strong>ফোন:</strong> 01970-138816, 01917-360011</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801970138816">01970-138816</a> , <a class="btn call" href="tel:+8801917360011">01917-360011</a></p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
         <ul class="services-list">
           <li>ইঞ্জিন মেরামত</li>
@@ -56,16 +94,18 @@
           <li>বডি ড্রেন প্যান চেঞ্জ</li>
         </ul>
         <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
+          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank" rel="noopener">🌐 Facebook</a>
+          <!-- your available PDF -->
+          <a class="btn pdf" href="hrh-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
         </div>
       </article>
 
       <!-- PHP Automobile LTD -->
       <article class="card">
-        <h3><img src="php.jpeg" alt="PHP Logo"> PHP Automobile LTD</h3>
+        <h3><img src="images/php.jpeg" alt="PHP Logo"> PHP Automobile LTD</h3>
         <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-1212</p>
-        <p><strong>ফোন:</strong> 01708-689294</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801708689294">01708-689294</a></p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
         <ul class="services-list">
           <li>ইঞ্জিন মেরামত</li>
@@ -77,16 +117,18 @@
           <li>অয়েল ফিল্টার চেঞ্জ</li>
         </ul>
         <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank">🌐 Facebook</a>
+          <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank" rel="noopener">🌐 Facebook</a>
+          <!-- placeholder PDF (add php-profile.pdf later) -->
+          <a class="btn pdf" href="php-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
         </div>
       </article>
 
       <!-- Ms. Mayer Doa Rohiz -->
       <article class="card">
-        <h3><img src="doa.jpeg" alt="Doa Logo"> Ms. Mayer Doa Rohiz</h3>
+        <h3><img src="images/doa.jpeg" alt="Doa Logo"> Ms. Mayer Doa Rohiz</h3>
         <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
-        <p><strong>ফোন:</strong> 01767-468755</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801767468755">01767-468755</a></p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
         <ul class="services-list">
           <li>ইঞ্জিন রিপেয়ার</li>
@@ -96,20 +138,21 @@
           <li>কার ওয়াশ</li>
         </ul>
         <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank">🌐 Facebook</a>
+          <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank" rel="noopener">🌐 Facebook</a>
+          <a class="btn pdf" href="doa-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
         </div>
       </article>
-    </div>
+
+    </div> <!-- .grid -->
 
     <!-- Heavy Vehicle -->
     <h2 class="section-title">🚛 Heavy Vehicle Workshops</h2>
     <div class="grid">
-      <!-- Bahon Sheba -->
       <article class="card">
-        <h3><img src="bahon.jpeg" alt="Bahon Logo"> Bahon Sheba</h3>
+        <h3><img src="images/bahon.jpeg" alt="Bahon Logo"> Bahon Sheba</h3>
         <p><strong>ঠিকানা:</strong> বেরুলিয়া, মিরপুর রোড, ঢাকা</p>
-        <p><strong>ফোন:</strong> 01723-818338</p>
+        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801723818338">01723-818338</a></p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
         <ul class="services-list">
           <li>ডিজেল ইঞ্জিন রিপেয়ার</li>
@@ -120,124 +163,77 @@
           <li>কার ওয়াশ</li>
         </ul>
         <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/163YmNRnSR/" target="_blank">🌐 Facebook</a>
+          <a class="btn map" href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/share/163YmNRnSR/" target="_blank" rel="noopener">🌐 Facebook</a>
+          <a class="btn pdf" href="bahon-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
         </div>
       </article>
     </div>
+
+    <!-- Live Chat -->
+    <section>
+      <h2>💬 লাইভ চ্যাট</h2>
+      <p>যদি কোনো প্রশ্ন বা সাহায্য দরকার হয়, সরাসরি চ্যাট করুন।</p>
+      <!-- আপনি যদি Tawk.to এর সঠিক widget ID চান, সেটাই এখানে বসাবেন -->
+      <iframe src="https://tawk.to/chat/64f76c92b2d3e13950eccf9d/1h9k9g7v3"
+              style="width:100%; height:400px; border:0;" loading="lazy"></iframe>
+    </section>
+
+    <!-- MVP Plan -->
+    <section>
+      <h2>📌 MVP রিলিজ প্লান</h2>
+      <ul>
+        <li>SOS ও WhatsApp সংযোগ চালু</li>
+        <li>GPS লোকেশন শেয়ারিং</li>
+        <li>সরাসরি লাইভ চ্যাট সাপোর্ট</li>
+        <li>সার্ভিস সেন্টার লিস্ট ও ম্যাপ লোকেশন</li>
+        <li>প্রাথমিক কাস্টমার অ্যাপ (পরে যুক্ত হবে)</li>
+      </ul>
+    </section>
+
+    <!-- Security & Operations -->
+    <section>
+      <h2>🔒 নিরাপত্তা ও অপারেশন</h2>
+      <p>✔ সব কাস্টমার তথ্য নিরাপদ থাকবে।</p>
+      <p>✔ লোকেশন শেয়ার কেবলমাত্র জরুরি সেবার জন্য ব্যবহৃত হবে।</p>
+      <p>✔ SOS বাটন ক্লিক করলে নিকটস্থ সার্ভিস সেন্টার সঙ্গে সঙ্গে জানবে।</p>
+      <p>✔ ২৪/৭ টিম প্রস্তুত থাকবে সাহায্যের জন্য।</p>
+    </section>
+
+    <!-- Contact / Links -->
+    <section>
+      <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn map" href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank">📍 Google Maps (Bahon)</a>
+        <a class="btn fb" href="https://www.facebook.com/share/163YmNRnSR/" target="_blank">📘 Facebook</a>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
-  <!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automobile Solution</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
-    header, footer { background:#222; color:#fff; text-align:center; padding:15px; }
-    h2 { color:#111; }
-    section { padding:30px; background:#fff; margin:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    ul { margin:0; padding-left:20px; }
-    button { cursor:pointer; }
-    .links { display:flex; justify-content:center; gap:20px; margin-top:20px; }
-    .links a { text-decoration:none; padding:10px 20px; border-radius:6px; color:#fff; font-weight:bold; }
-    .btn-map { background:#4285F4; }
-    .btn-fb { background:#1877F2; }
-    iframe { border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-  </style>
-</head>
-<body>
 
-  <!-- হেডার -->
-  <header>
-    <h1>🚗 Automobile Solution</h1>
-    <p>যে কোন সময়, যে কোন সমস্যার দ্রুত সমাধান</p>
-  </header>
-
-  <!-- SOS + GPS -->
-  <div id="sos" style="position:sticky; top:0; z-index:9999; background:#111; color:#fff; padding:10px; display:flex; gap:8px; align-items:center; justify-content:center">
-    🚨 জরুরি সাহায্য লাগবে?
-    <button id="sos-call" style="padding:8px 12px; border:0; border-radius:8px; background:#e11; color:#fff;">📞 কল করুন</button>
-    <button id="sos-wa" style="padding:8px 12px; border:0; border-radius:8px; background:#25D366; color:#fff;">🟢 WhatsApp SOS</button>
-  </div>
-
-  <!-- সার্ভিস লিস্ট -->
-  <section>
-    <h2>🔧 সার্ভিস সমূহ</h2>
-    <ul>
-      <li>ইঞ্জিন সমস্যা সমাধান</li>
-      <li>গিয়ার ও ব্রেক সাপোর্ট</li>
-      <li>টায়ার পরিবর্তন</li>
-      <li>রাস্তায় জরুরি উদ্ধার সেবা</li>
-    </ul>
-  </section>
-
-  <!-- Live Chat -->
-  <section>
-    <h2>💬 লাইভ চ্যাট</h2>
-    <p>যদি কোনো প্রশ্ন বা সাহায্য দরকার হয়, সরাসরি চ্যাট করুন।</p>
-    <iframe src="https://tawk.to/chat/64f76c92b2d3e13950eccf9d/1h9k9g7v3"
-            style="width:100%; height:400px; border:0;"></iframe>
-  </section>
-
-  <!-- MVP Plan -->
-  <section>
-    <h2>📌 MVP রিলিজ প্লান</h2>
-    <ul>
-      <li>SOS ও WhatsApp সংযোগ চালু</li>
-      <li>GPS লোকেশন শেয়ারিং</li>
-      <li>সরাসরি লাইভ চ্যাট সাপোর্ট</li>
-      <li>সার্ভিস সেন্টার লিস্ট ও ম্যাপ লোকেশন</li>
-      <li>প্রাথমিক কাস্টমার অ্যাপ (পরে যুক্ত হবে)</li>
-    </ul>
-  </section>
-
-  <!-- Security & Operations -->
-  <section>
-    <h2>🔒 নিরাপত্তা ও অপারেশন</h2>
-    <p>✔ সব কাস্টমার তথ্য নিরাপদ থাকবে।</p>
-    <p>✔ লোকেশন শেয়ার কেবলমাত্র জরুরি সেবার জন্য ব্যবহৃত হবে।</p>
-    <p>✔ SOS বাটন ক্লিক করলে নিকটস্থ সার্ভিস সেন্টার সঙ্গে সঙ্গে জানবে।</p>
-    <p>✔ ২৪/৭ টিম প্রস্তুত থাকবে সাহায্যের জন্য।</p>
-  </section>
-
-  <!-- Google Maps Embed -->
-  <section>
-    <h2>📍 আমাদের লোকেশন (Google Maps)</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.509157788122!2d90.4211!3d23.8022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7af2b3c3a9d%3A0xf28df34e8b38e7f7!2sKuril%20Flyover!5e0!3m2!1sen!2sbd!4v1694000000000"
-      width="100%" height="350" allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
-
-  <!-- Links Section -->
-  <section>
-    <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
-    <div class="links">
-      <a href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank" class="btn-map">📍 Google Maps</a>
-      <a href="https://www.facebook.com/share/163YmNRnSR/" target="_blank" class="btn-fb">📘 Facebook</a>
-    </div>
-  </section>
-
-  <!-- ফুটার -->
-  <footer>
-    <p>© 2025 Automobile Solution - All Rights Reserved</p>
-  </footer>
-
-  <!-- Scripts -->
+  <!-- Service worker registration (PWA) -->
   <script>
-    const HELPLINE = "01962419405"; // আপনার ফোন নম্বর
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(()=> console.log('Service Worker registered'))
+        .catch(err=> console.warn('SW failed', err));
+    }
+  </script>
+
+  <!-- SOS + WhatsApp script -->
+  <script>
+    const HELPLINE = "01962419405"; // আপনার নম্বর
 
     document.getElementById('sos-call').onclick = () => {
       window.location.href = tel:${HELPLINE};
     };
 
     document.getElementById('sos-wa').onclick = () => {
-      let text = "SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
+      let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(pos => {
           const { latitude, longitude } = pos.coords;
@@ -248,7 +244,7 @@
         }, _err => {
           const wa = https://wa.me/8801962419405?text=${encodeURIComponent(text)};
           window.open(wa, '_blank');
-        });
+        }, { enableHighAccuracy:true, timeout:8000 });
       } else {
         const wa = https://wa.me/8801962419405?text=${encodeURIComponent(text)};
         window.open(wa, '_blank');
@@ -258,4 +254,3 @@
 
 </body>
 </html>
-
