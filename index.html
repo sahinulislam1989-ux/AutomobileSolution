@@ -202,11 +202,52 @@
 
     <!-- Contact / Links -->
     <section>
-      <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
-      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a class="btn map" href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank">📍 Google Maps (Bahon)</a>
-        <a class="btn fb" href="https://www.facebook.com/share/163YmNRnSR/" target="_blank">📘 Facebook</a>
-      </div>
+      <!-- Links Section -->
+<section>
+  <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
+  <div class="links">
+    <a href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank" class="btn-map">📍 Google Maps</a>
+    <a href="https://www.facebook.com/share/163YmNRnSR/" target="_blank" class="btn-fb">📘 Facebook</a>
+  </div>
+
+  <!-- SOS & Location Share Buttons -->
+  <div style="text-align:center; margin-top:20px;">
+    <button onclick="sendSOS()" 
+            style="background:#dc3545; color:#fff; padding:12px 20px; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:5px;">
+      🚨 SOS
+    </button>
+
+    <button onclick="shareLocation()" 
+            style="background:#007bff; color:#fff; padding:12px 20px; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:5px;">
+      📍 লোকেশন শেয়ার
+    </button>
+  </div>
+</section>
+
+<!-- Script রাখবেন footer এর উপরে -->
+<script>
+  function sendSOS() {
+    let whatsappNumber = "8801962419405"; // আপনার WhatsApp নাম্বার
+    let message = "🚨 জরুরি সাহায্য দরকার! দয়া করে দ্রুত যোগাযোগ করুন।";
+    let whatsappLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
+    window.open(whatsappLink, "_blank");
+  }
+
+  function shareLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+        let locationLink = https://www.google.com/maps?q=${latitude},${longitude};
+        let whatsappNumber = "8801962419405"; 
+        let whatsappLink = https://wa.me/${whatsappNumber}?text=📍 আমার লোকেশন: ${locationLink};
+        window.open(whatsappLink, "_blank");
+      });
+    } else {
+      alert("আপনার ডিভাইসে লোকেশন শেয়ার সাপোর্ট করছে না।");
+    }
+  }
+</script>
     </section>
 
   </main>
