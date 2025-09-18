@@ -8,8 +8,7 @@
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#001f3f">
-
-  <style>
+<style>
     :root{
       --brand:#001f3f;
       --accent:#0073e6;
@@ -19,27 +18,26 @@
       --call:#28a745;
     }
     *{box-sizing:border-box}
-    body{font-family:'Arial', sans-serif; margin:0; background:#f4f4f4; color:#222;}
+    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
     header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    header img{height:100px; border-radius:10px; background:#fff; padding:6px; transition: transform 0.3s;}
-    header img:hover{transform: scale(1.05);}
-    header .title{font-size:26px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:16px;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    header .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
     .wrap{width:92%; max-width:1100px; margin:20px auto;}
-    h2.section-title{text-align:center; color:var(--brand); margin:24px 0;}
-    .grid{display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
-    .card{background:#fff; padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); border:1px solid rgba(0,0,0,0.05); transition: transform 0.2s;}
-    .card:hover{transform: translateY(-4px);}
-    .card h3{margin:0 0 10px; display:flex; gap:10px; align-items:center; color:var(--accent);}
-    .card h3 img{width:60px; height:60px; object-fit:cover; border-radius:8px;}
-    .card p{margin:6px 0; font-size:14px;}
+    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
+    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
+    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
+    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
+    .card p, .card li { color:#222; }
     .services-list{padding-left:18px; margin:8px 0;}
-    .buttons{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;}
-    .btn{display:inline-block; padding:8px 14px; border-radius:8px; color:#fff; text-decoration:none; font-weight:600; font-size:14px; transition: background 0.2s;}
+    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
+    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
     .btn.map{background:var(--map);}
     .btn.fb{background:var(--fb);}
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
+  
     #sos{position:sticky; top:0; z-index:9999; background:#111; color:#fff; padding:10px; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap;}
     #sos button{border:0; padding:8px 14px; border-radius:8px; font-weight:700; cursor:pointer; transition: background 0.2s;}
     section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
