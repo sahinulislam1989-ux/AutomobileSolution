@@ -86,38 +86,51 @@
         <div class="buttons">
           <a class="btn fb" href="https://www.facebook.com/share/17EkckTb3U/" target="_blank" rel="noopener">🌐 Facebook</a>
 <script>
+ <!-- SOS + WhatsApp script -->
+<script>
+  const HELPLINE = "01962419405"; // আপনার WhatsApp & Phone নাম্বার
+  const FB_PAGE_ID = "100069418518261"; // আপনার Facebook Page ID
+
   // SOS কল বাটন
-  const HELPLINE = "01962419405"; // আপনার ফোন নম্বর
   document.getElementById('sos-call').onclick = () => {
     window.location.href = tel:${HELPLINE};
   };
 
   // SOS WhatsApp বাটন
   document.getElementById('sos-wa').onclick = () => {
-    const whatsappNumber = "8801962419405"; // আপনার WhatsApp নম্বর
-    const text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
+    let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
+    let whatsappNumber = "8801962419405"; // দেশের কোডসহ WhatsApp নাম্বার
 
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (pos) => {
-          const latitude = pos.coords.latitude;
-          const longitude = pos.coords.longitude;
-          const locationLink = https://www.google.com/maps?q=${latitude},${longitude};
-          const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${HELPLINE};
-          const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};
-          window.open(waLink, '_blank');
-        },
-        (_err) => {
-          const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
-          window.open(waLink, '_blank');
-        },
-        { enableHighAccuracy: true, timeout: 8000 }
-      );
+      navigator.geolocation.getCurrentPosition(pos => {
+        const { latitude, longitude } = pos.coords;
+        const locationLink = https://www.google.com/maps?q=${latitude},${longitude};
+        const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${HELPLINE};
+        const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};
+        window.open(waLink, '_blank');
+      }, _err => {
+        const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+        window.open(waLink, '_blank');
+      }, { enableHighAccuracy:true, timeout:8000 });
     } else {
       const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
       window.open(waLink, '_blank');
     }
   };
+</script>
+
+<!-- Messenger Chat plugin -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+  src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
+
+<div class="fb-customerchat"
+     attribution="setup_tool"
+     page_id="100069418518261"
+     theme_color="#0084ff"
+     logged_in_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?"
+     logged_out_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?">
+</div>
 
   // Facebook Messenger Chat plugin
   window.fbAsyncInit = function() {
