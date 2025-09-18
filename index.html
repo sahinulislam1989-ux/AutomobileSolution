@@ -19,37 +19,36 @@
       --call:#28a745;
     }
     *{box-sizing:border-box}
-    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
+    body{font-family:'Arial', sans-serif; margin:0; background:#f4f4f4; color:#222;}
     header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    header .title{font-size:22px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:14px;}
+    header img{height:100px; border-radius:10px; background:#fff; padding:6px; transition: transform 0.3s;}
+    header img:hover{transform: scale(1.05);}
+    header .title{font-size:26px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:16px;}
     .wrap{width:92%; max-width:1100px; margin:20px auto;}
-    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
-    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03);}
-    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
-    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
+    h2.section-title{text-align:center; color:var(--brand); margin:24px 0;}
+    .grid{display:grid; gap:20px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
+    .card{background:#fff; padding:18px; border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.08); border:1px solid rgba(0,0,0,0.05); transition: transform 0.2s;}
+    .card:hover{transform: translateY(-4px);}
+    .card h3{margin:0 0 10px; display:flex; gap:10px; align-items:center; color:var(--accent);}
+    .card h3 img{width:60px; height:60px; object-fit:cover; border-radius:8px;}
     .card p{margin:6px 0; font-size:14px;}
     .services-list{padding-left:18px; margin:8px 0;}
-    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
-    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
+    .buttons{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;}
+    .btn{display:inline-block; padding:8px 14px; border-radius:8px; color:#fff; text-decoration:none; font-weight:600; font-size:14px; transition: background 0.2s;}
     .btn.map{background:var(--map);}
     .btn.fb{background:var(--fb);}
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
-
-    /* SOS bar */
     #sos{position:sticky; top:0; z-index:9999; background:#111; color:#fff; padding:10px; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    #sos button{border:0; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer;}
-
-    /* small layout */
-    section{padding:18px; margin-top:20px; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06);}
-    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222;}
-
+    #sos button{border:0; padding:8px 14px; border-radius:8px; font-weight:700; cursor:pointer; transition: background 0.2s;}
+    section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
+    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
     @media (max-width:420px){
       header {padding:12px;}
       .btn{font-size:13px; padding:7px 10px;}
+      header img{height:80px;}
+      .card h3 img{width:50px; height:50px;}
     }
   </style>
 </head>
@@ -57,13 +56,12 @@
 
   <!-- Header -->
   <header>
-    <img src="solution.jpeg" alt="Automobile Solution Logo" width="280" height="180">
+    <img src="solution.jpeg" alt="Automobile Solution Logo">
     <div>
       <div class="title">🚗 Automobile Solution</div>
       <div class="tag">Multiple workshops — Ready to serve</div>
     </div>
   </header>
-  </ul>
         <div class="buttons">
           <a class="btn fb" href="https://www.facebook.com/share/17EkckTb3U/" target="_blank" rel="noopener">🌐 Facebook</a>
 
@@ -72,21 +70,6 @@
     🚨 জরুরি সাহায্য লাগবে?
     <button id="sos-call" style="background:#e11;color:#fff">📞 কল করুন</button>
     <button id="sos-wa" style="background:#25D366;color:#fff">🟢 WhatsApp SOS</button>
-    <!-- Messenger Chat plugin -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
-
-  <div class="fb-customerchat"
-       attribution="setup_tool"
-       page_id="100069418518261"
-       theme_color="#0084ff"
-       logged_in_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?"
-       logged_out_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?">
-  </div>
-
-  <!-- WhatsApp Button -->
-  <a id="whatsapp-button" href="https://wa.me/8801962419405 text=হ্যালো! আমাকে সাহায্য করুন" target="_blank">📱</a>
 
   <main class="wrap">
 
@@ -401,12 +384,11 @@
       }
     };
   </script>
-          
+ 
      <!-- Messenger Chat plugin -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
-
   <div class="fb-customerchat"
        attribution="setup_tool"
        page_id="100069418518261"
@@ -415,8 +397,8 @@
        logged_out_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?">
   </div>
 
-  <!-- WhatsApp Button -->
-  <a id="whatsapp-button" href="https://wa.me/8801962419405 text=হ্যালো! আমাকে সাহায্য করুন" target="_blank">📱</a>
+  <!-- WhatsApp floating button -->
+  <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
 
-  </body>
+</body>
 </html>
