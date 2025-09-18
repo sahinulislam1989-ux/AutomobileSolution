@@ -85,28 +85,57 @@
   </header>
         <div class="buttons">
           <a class="btn fb" href="https://www.facebook.com/share/17EkckTb3U/" target="_blank" rel="noopener">🌐 Facebook</a>
+<script>
+  // SOS কল বাটন
+  const HELPLINE = "01962419405"; // আপনার ফোন নম্বর
+  document.getElementById('sos-call').onclick = () => {
+    window.location.href = tel:${HELPLINE};
+  };
 
-  <!-- SOS Bar -->
-  document.getElementById('sos-wa').onclick = () => {  
-  let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";  
-  let whatsappNumber = "8801962419405"; // আপনার WhatsApp নম্বর  
+  // SOS WhatsApp বাটন
+  document.getElementById('sos-wa').onclick = () => {
+    const whatsappNumber = "8801962419405"; // আপনার WhatsApp নম্বর
+    const text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
 
-  if (navigator.geolocation) {  
-    navigator.geolocation.getCurrentPosition(pos => {  
-      const { latitude, longitude } = pos.coords;  
-      const locationLink = https://www.google.com/maps?q=${latitude},${longitude};  
-      const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${whatsappNumber};  
-      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};  
-      window.open(waLink, '_blank');  
-    }, _err => {  
-      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};  
-      window.open(waLink, '_blank');  
-    }, { enableHighAccuracy:true, timeout:8000 });  
-  } else {  
-    const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};  
-    window.open(waLink, '_blank');  
-  }  
-};
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const latitude = pos.coords.latitude;
+          const longitude = pos.coords.longitude;
+          const locationLink = https://www.google.com/maps?q=${latitude},${longitude};
+          const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${HELPLINE};
+          const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};
+          window.open(waLink, '_blank');
+        },
+        (_err) => {
+          const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+          window.open(waLink, '_blank');
+        },
+        { enableHighAccuracy: true, timeout: 8000 }
+      );
+    } else {
+      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+      window.open(waLink, '_blank');
+    }
+  };
+
+  // Facebook Messenger Chat plugin
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: 'v17.0'
+    });
+  };
+
+  (function(d, s, id){
+    let js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
   <main class="wrap">
 
     <!-- Light Vehicle -->
