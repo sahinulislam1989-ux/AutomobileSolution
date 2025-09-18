@@ -88,18 +88,20 @@
 <script>
 <!-- WhatsApp SOS Button -->
 <button id="sos-wa">WhatsApp SOS</button>
-
+  
+<script>
 <!-- Messenger Chat Plugin -->
 <div id="fb-root"></div>
 <div id="fb-customer-chat" class="fb-customerchat"></div>
 
 <script>
-  // Messenger Page ID সেট করুন
   var chatbox = document.getElementById('fb-customer-chat');
   chatbox.setAttribute("page_id", "100069418518261"); // আপনার Page ID
   chatbox.setAttribute("attribution", "biz_inbox");
+</script>
 
-  // Facebook SDK লোড করা
+<script>
+  // Facebook Messenger Chat plugin
   window.fbAsyncInit = function() {
     FB.init({
       xfbml: true,
@@ -109,7 +111,7 @@
 
   (function(d, s, id){
     let js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
+    if (d.getElementById(id)) {return;}
     js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
     fjs.parentNode.insertBefore(js, fjs);
