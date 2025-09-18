@@ -37,10 +37,34 @@
     .btn.fb{background:var(--fb);}
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
-    #sos{position:sticky; top:0; z-index:9999; background:#222; color:#fff; padding:10px; display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    #sos button{border:0; padding:8px 14px; border-radius:8px; font-weight:700; cursor:pointer; transition: background 0.2s;}
+
+    /* SOS bar - কালো লেখা */
+    #sos{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
+      color:#000; /* লেখা কালো */
+      padding:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    #sos button{
+      border:0;
+      padding:8px 14px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      transition: background 0.2s;
+      color:#000; /* বাটনের লেখা কালো */
+    }
+
     section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
     footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
+
     @media (max-width:420px){
       header {padding:12px;}
       .btn{font-size:13px; padding:7px 10px;}
