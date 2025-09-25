@@ -322,7 +322,7 @@ document.getElementById('sos-wa').onclick = () => {
 
       <!-- শাহাদাত এসি এন্ড ইলেকট্রিক সার্ভিস সেন্টার  -->
       <article class="card">
-        <h3><img src="focus.jpeg" alt="focus Logo" width="200" height="200"> শাহাদাত এসি এন্ড ইলেকট্রিক সার্ভিস সেন্টার </h3>
+        <h3><img src=".jpeg" alt=" Logo" width="200" height="200"> শাহাদাত এসি এন্ড ইলেকট্রিক সার্ভিস সেন্টার </h3>
         <p><strong>ঠিকানা:</strong>ধানমন্ডি ২৭ নাম্বার (ভিশন 
 আই হসপিটাল এর পাশে),ধানমন্ডি, ঢাকা</p>
         <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801718479691">01718-479691</a>
@@ -553,54 +553,6 @@ document.getElementById('sos-wa').onclick = () => {
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
 
-  <!-- Service worker registration (PWA) -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(()=> console.log('Service Worker registered'))
-        .catch(err=> console.warn('SW failed', err));
-    }
-  </script>
-
-  <!-- SOS + WhatsApp script -->
-  <script>
-    const HELPLINE = "01962419405"; // আপনার নম্বর
-
-    document.getElementById('sos-call').onclick = () => {
-      window.location.href = tel:${HELPLINE};
-    };
-
-    document.getElementById('sos-wa').onclick = () => {
-      let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(pos => {
-          const { latitude, longitude } = pos.coords;
-          const maps = https://maps.google.com/?q=${latitude},${longitude};
-          const msg = ${text}\n\n📍 লোকেশন: ${maps}\n☎️ কল: ${HELPLINE};
-          const wa = https://wa.me/8801962419405?text=${encodeURIComponent(msg)};
-          window.open(wa, '_blank');
-        }, _err => {
-          const wa = https://wa.me/8801962419405?text=${encodeURIComponent(text)};
-          window.open(wa, '_blank');
-        }, { enableHighAccuracy:true, timeout:8000 });
-      } else {
-        const wa = https://wa.me/8801962419405?text=${encodeURIComponent(text)};
-        window.open(wa, '_blank');
-      }
-    };
-  </script>
- 
-     <!-- Messenger Chat plugin -->
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js"></script>
-  <div class="fb-customerchat"
-       attribution="setup_tool"
-       page_id="100069418518261"
-       theme_color="#0084ff"
-       logged_in_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?"
-       logged_out_greeting="হ্যালো! কিভাবে সাহায্য করতে পারি?">
-  </div>
 
   <!-- WhatsApp floating button -->
   <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
