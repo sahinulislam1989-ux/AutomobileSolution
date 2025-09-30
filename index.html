@@ -1,254 +1,189 @@
-  <!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automobile Solution</title>
-<style>
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-    color: #333;
-  }
-  header {
-    text-align: center;
-    background: #fff;
-    padding: 20px 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  header img {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto 10px;
-  }
-  header h1 {
-    font-size: 28px;
-    margin: 0;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    background: #0077cc;
-  }
-  nav button {
-    background: #0077cc;
-    color: #fff;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 0 2px;
-  }
-  nav button.active {
-    background: #005fa3;
-  }
-  section {
-    padding: 20px;
-    display: none;
-  }
-  section.active {
-    display: block;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-  }
-  .card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
-  .card h3 {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-  .card p {
-    margin: 5px 0;
-  }
-  .services-list {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  .buttons a {
-    display: inline-block;
-    margin: 5px 5px 0 0;
-    padding: 6px 12px;
-    background: #0077cc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
-  }
-  footer {
-    text-align: center;
-    padding: 15px;
-    background: #222;
-    color: #fff;
-  }
-  footer a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Solution</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+        .wrap { padding: 20px; max-width: 1200px; margin: auto; }
+        h2.section-title { color: #333; margin-top: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .card img { border-radius: 10px; }
+        .services-list { list-style: disc; margin-left: 20px; }
+        .buttons a { display: inline-block; margin: 5px 5px 0 0; padding: 8px 12px; background: #007bff; color: #fff; text-decoration: none; border-radius: 6px; }
+        .buttons a.fb { background: #4267B2; }
+        .buttons a.pdf { background: #28a745; }
+        .buttons a.map { background: #17a2b8; }
+        .btn.call { color: #007bff; text-decoration: none; }
+        section { margin-top: 40px; }
+        button { cursor: pointer; }
+    </style>
 </head>
 <body>
-
-<header>
-  <img src="logo.png" alt="Automobile Solution Logo">
-  <h1>🚗 Automobile Solution</h1>
-  <p>Multiple workshops — Ready to serve</p>
-</header>
-
-<nav>
-  <button class="tab-btn active" data-tab="about">About</button>
-  <button class="tab-btn" data-tab="services">Services</button>
-  <button class="tab-btn" data-tab="adas">Adas</button>
-</nav>
-
-<main>
-  <!-- About Section -->
-  <section id="about" class="active">
-    <h2>আমাদের সম্পর্কে</h2>
-    <p>Automobile Solution একটি পূর্ণাঙ্গ অটোমোবাইল সার্ভিস প্ল্যাটফর্ম। এখানে আপনি লাইট ও হেভি ভেহিকেল উভয় সার্ভিস পেতে পারবেন।</p>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
+    <header class="wrap">
+        <h1>🚗 Automobile Solution</h1>
+        <p>Multiple workshops — Ready to serve</p>
+        <p>জরুরী প্রয়োজনে ডান পাসের মোবাইল চিহ্ন দেওয়া আইকনে WhatsApp মেসেঞ্জারে মাধ্যমে যোগাযোগ করুন।</p>
+        <a href="https://www.facebook.com/share/17EkckTb3U/">🌐 Facebook</a>
+    </header><main class="wrap">
     <!-- Light Vehicle Workshops -->
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
     <div class="grid">
-      <article class="card">
-        <h3>HRH Automobiles</h3>
-        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a href="tel:+8801970138816">01970-138816</a>, <a href="tel:+8801917360011">01917-360011</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-          <li>ব্রেক বুস্টার রিপেয়ার</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-        </ul>
-        <div class="buttons">
-          <a href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
-          <a href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
-          <a href="hrh.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
+        <!-- HRH Automobiles -->
+        <article class="card">
+            <h3><img src="hrh.jpg" alt="HRH Logo" width="200" height="200"> HRH Automobiles</h3>
+            <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-১২২৯</p>
+            <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801970138816">01970-138816</a> , <a class="btn call" href="tel:+8801917360011">01917-360011</a></p>
+            <p><strong>সার্ভিস সমূহ:</strong></p>
+            <ul class="services-list">
+                <li>ইঞ্জিন মেরামত</li>
+                <li>ব্রেক সিস্টেম সার্ভিস</li>
+                <li>গিয়ার বক্স মেরামত</li>
+                <li>এয়ার কন্ডিশন রিপেয়ার</li>
+                <li>কার ওয়াশ</li>
+                <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+                <li>ব্রেক বুস্টার রিপেয়ার</li>
+                <li>বডি ড্রেন প্যান চেঞ্জ</li>
+            </ul>
+            <div class="buttons">
+                <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
+                <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
+                <a class="btn pdf" href="hrh.pdf" target="_blank">📑Profile PDF</a>
+            </div>
+        </article>
 
-      <!-- Auto Tecnic -->
-      <article class="card">
-        <h3>Auto Tecnic</h3>
-        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a href="tel:+8801685093636">01685-093636</a>, <a href="tel:+8801712369797">01712-369797</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-          <li>ব্রেক বুস্টার রিপেয়ার</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-        </ul>
-        <div class="buttons">
-          <a href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77?g_st=aw" target="_blank">📍 Google Map</a>
-          <a href="https://www.facebook.com/Autotechnic41?mibextid=ZbWKwL" target="_blank">🌐 Facebook</a>
-          <a href="auto.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
+        <!-- Auto Tecnic -->
+        <article class="card">
+            <h3><img src="auto.jpeg" alt="auto Logo" width="200" height="200"> Auto Tecnic</h3>
+            <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
+            <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801685093636">01685-093636</a> , <a class="btn call" href="tel:+8801712369797">01712-369797</a></p>
+            <p><strong>সার্ভিস সমূহ:</strong></p>
+            <ul class="services-list">
+                <li>ইঞ্জিন মেরামত</li>
+                <li>ব্রেক সিস্টেম সার্ভিস</li>
+                <li>গিয়ার বক্স মেরামত</li>
+                <li>এয়ার কন্ডিশন রিপেয়ার</li>
+                <li>কার ওয়াশ</li>
+                <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+                <li>ব্রেক বুস্টার রিপেয়ার</li>
+                <li>বডি ড্রেন প্যান চেঞ্জ</li>
+            </ul>
+            <div class="buttons">
+                <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77?g_st=aw" target="_blank">📍 Google Map</a>
+                <a class="btn fb" href="https://www.facebook.com/Autotechnic41?mibextid=ZbWKwL" target="_blank">🌐 Facebook</a>
+                <a class="btn pdf" href="auto.pdf" target="_blank">📑Profile PDF</a>
+            </div>
+        </article>
 
-      <!-- Add other workshops in same way -->
+        <!-- PHP Automobile LTD -->
+        <article class="card">
+            <h3><img src="php.jpeg" alt="PHP Logo" width="200" height="200"> PHP Automobile LTD</h3>
+            <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-১২১২</p>
+            <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801708689294">01708-689294</a></p>
+            <p><strong>সার্ভিস সমূহ:</strong></p>
+            <ul class="services-list">
+                <li>ইঞ্জিন মেরামত</li>
+                <li>ব্রেক সিস্টেম সার্ভিস</li>
+                <li>গিয়ার বক্স মেরামত</li>
+                <li>কার ওয়াশ</li>
+                <li>ইঞ্জিন টিউনআপ</li>
+                <li>এয়ার কন্ডিশন রিপেয়ার</li>
+                <li>অয়েল ফিল্টার চেঞ্জ</li>
+            </ul>
+            <div class="buttons">
+                <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank">📍 Google Map</a>
+                <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank">🌐 Facebook</a>
+                <a class="btn pdf" href="php-profile.pdf" target="_blank">📑 Profile PDF</a>
+            </div>
+        </article>
+
+        <!-- Ms. Mayer Doa Rohiz -->
+        <article class="card">
+            <h3><img src="doa.jpeg" alt="Doa Logo" width="200" height="200"> Ms. Mayer Doa Rohiz</h3>
+            <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
+            <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801767468755">01767-468755</a></p>
+            <p><strong>সার্ভিস সমূহ:</strong></p>
+            <ul class="services-list">
+                <li>ইঞ্জিন রিপেয়ার</li>
+                <li>ব্রেক সিস্টেম সার্ভিস</li>
+                <li>গিয়ার বক্স মেরামত</li>
+                <li>সাসপেনশন চেক</li>
+                <li>কার ওয়াশ</li>
+            </ul>
+            <div class="buttons">
+                <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank">📍 Google Map</a>
+                <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank">🌐 Facebook</a>
+                <a class="btn pdf" href="doa-profile.pdf" target="_blank">📑 Profile PDF</a>
+            </div>
+        </article>
+    </div>
+
+    <!-- Light Vehicle Other Workshops -->
+    <h2 class="section-title">Light Vehicle Other Workshops</h2>
+    <div class="grid">
+        <!-- Add all other light vehicle workshops here -->
     </div>
 
     <!-- Heavy Vehicle Workshops -->
     <h2 class="section-title">🚛 Heavy Vehicle Workshops</h2>
     <div class="grid">
-      <article class="card">
-        <h3>Bahon Sheba</h3>
-        <p><strong>ঠিকানা:</strong> বেরুলিয়া, মিরপুর রোড, ঢাকা</p>
-        <p><strong>ফোন:</strong> <a href="tel:+8801723818338">01723-818338</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ডিজেল ইঞ্জিন রিপেয়ার</li>
-          <li>ক্লাচ ও গিয়ার সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-          <li>সাসপেনশন চেক</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8?g_st=aw" target="_blank">📍 Google Map</a>
-          <a href="https://www.facebook.com/share/163YmNRnSR/" target="_blank">🌐 Facebook</a>
-          <a href="bahon.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
-
-      <!-- Add other heavy workshops similarly -->
+        <!-- Add all heavy vehicle workshops here -->
     </div>
-  </section>
 
-  <!-- Adas Section -->
-  <section id="adas">
-    <h2>Adas Section</h2>
-    <p>এখানে পরবর্তীতে নতুন এন্ট্রি যুক্ত করা যাবে।</p>
-  </section>
+    <!-- Heavy Other Vehicle Workshop -->
+    <h2 class="section-title">Heavy Other Vehicle Workshop</h2>
+    <div class="grid">
+        <!-- Add all heavy other vehicle workshops here -->
+    </div>
+
+    <!-- MVP Plan -->
+    <section>
+        <h2>📌 MVP রিলিজ প্লান</h2>
+        <ul>
+            <li>SOS ও WhatsApp সংযোগ চালু</li>
+            <li>GPS লোকেশন শেয়ারিং</li>
+            <li>সরাসরি লাইভ চ্যাট সাপোর্ট</li>
+            <li>সার্ভিস সেন্টার লিস্ট ও ম্যাপ লোকেশন</li>
+            <li>প্রাথমিক কাস্টমার অ্যাপ (পরে যুক্ত হবে)</li>
+        </ul>
+    </section>
+
+    <!-- Security & Operations -->
+    <section>
+        <h2>🔒 নিরাপত্তা ও অপারেশন</h2>
+        <p>✔ সব কাস্টমার তথ্য নিরাপদ থাকবে।</p>
+        <p>✔ লোকেশন শেয়ার কেবলমাত্র জরুরি সেবার জন্য ব্যবহৃত হবে।</p>
+        <p>✔ SOS বাটন ক্লিক করলে নিকটস্থ সার্ভিস সেন্টার সঙ্গে সঙ্গে জানবে।</p>
+        <p>✔ ২৪/৭ টিম প্রস্তুত থাকবে সাহায্যের জন্য।</p>
+    </section>
+
+    <!-- Contact / Links -->
+    <section>
+        <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
+        <p>whatsapp.com</p>
+        <a href="https://www.facebook.com/share/1ELQAgaqwF/">📘 Facebook</a>
+        <br>
+        <button onclick="shareLocation()" style="background:#fff; color:#000; padding:12px 20px; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:5px;">📍 লোকেশন শেয়ার</button>
+    </section>
+
 </main>
 
-<footer>
-  © 2025 Automobile Solution — All Rights Reserved | 
-  <a href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank">WhatsApp</a> | 
-  <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank">Facebook</a>
+<footer class="wrap">
+    <p>© 2025 Automobile Solution — All Rights Reserved</p>
+    <a href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন">📱 WhatsApp</a>
 </footer>
 
 <script>
-  // Tab functionality
-  const tabs = document.querySelectorAll('.tab-btn');
-  const sections = document.querySelectorAll('section');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const target = tab.getAttribute('data-tab');
-      sections.forEach(sec => {
-        if(sec.id === target){
-          sec.classList.add('active');
+    function shareLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                alert('আপনার অবস্থান: Latitude: ' + position.coords.latitude + ', Longitude: ' + position.coords.longitude);
+            });
         } else {
-          sec.classList.remove('active');
+            alert('আপনার ব্রাউজার জিওলোকেশন সাপোর্ট করে না।');
         }
-      });
-    });
-  });
-
-  // SOS Location share
-  function shareLocation(){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(pos=>{
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
-        alert(আপনার লোকেশন শেয়ার হয়েছে:\nLatitude: ${lat}\nLongitude: ${lon});
-      }, err=>{
-        alert('লোকেশন পাওয়া যায়নি।');
-      });
-    } else {
-      alert('আপনার ব্রাউজার GPS সমর্থন করে না।');
     }
-  }
 </script>
 
 </body>
