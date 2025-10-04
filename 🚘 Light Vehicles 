@@ -1,46 +1,19 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light Service — Automobile Solution</title>
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#222;}
-    header {background:#001f3f; color:#fff; padding:16px; text-align:center;}
-    header img{height:60px; border-radius:8px; background:#fff; padding:6px;}
-    h1,h2{color:#001f3f; text-align:center;}
-    section{max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
-    ul{padding-left:20px;}
-    a.btn{display:inline-block; margin:10px 5px; padding:8px 14px; background:#001f3f; color:#fff; text-decoration:none; border-radius:6px;}
-    a.btn:hover{background:#004080;}
-    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; margin-top:20px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Service</title>
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
-
 <header>
-  <img src="../images/solution.jpeg" alt="Automobile Solution Logo">
   <h1>Light Service</h1>
 </header>
-
-<section>
-  <h2>লাইট গাড়ির সার্ভিসিং ও মেরামত</h2>
-  <ul>
-    <li>ইঞ্জিন চেক ও মেরামত</li>
-    <li>অয়েল চেঞ্জ ও ফিল্টার সার্ভিস</li>
-    <li>ব্রেক সার্ভিস</li>
-    <li>বাতি ও বৈদ্যুতিক পরীক্ষা</li>
-    <li>মিনর বডি ও পেইন্ট সার্ভিস</li>
-  </ul>
-  <div style="text-align:center;">
-    <a href="../index.html" class="btn">🏠 Back to Home</a>
-    <a href="other.html" class="btn">Other Services</a>
-  </div>
-</section>
-
-<footer>
-  © 2025 Automobile Solution — All Rights Reserved
-</footer>
-
+<main class="wrap">
+  <p>লাইট গাড়ির সার্ভিসিং ও মেরামতের বিস্তারিত তথ্য এখানে থাকবে।</p>
+  <button onclick="window.location.href='../index.html'">Back to Home</button>
+</main>
+<footer>© 2025 Automobile Solution</footer>
 </body>
 </html>
