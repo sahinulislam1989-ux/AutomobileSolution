@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automobile Solution</title>
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#001f3f">
   <style>
     :root{
       --brand:#001f3f;
@@ -15,43 +13,90 @@
       --pdf:#8e44ad;
       --call:#28a745;
     }
-    *{box-sizing:border-box;}
-    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
-    
-    header{background:var(--brand); color:#fff; padding:16px; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family: Arial, sans-serif; background:#f4f6f8; color:#222;}
+
+    /* Header */
+    header{
+      background: var(--brand);
+      color: #fff;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      text-align:center;
+    }
     header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    header .title{font-size:22px; font-weight:700;}
+    .title{font-size:22px; font-weight:700;}
     .tag{color:#e6eefc; font-size:14px;}
 
-    .wrap{width:92%; max-width:1100px; margin:20px auto;}
-    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
-    
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
-    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
-    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
-    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
-    .card p, .card li { color:#222; }
+    /* SOS bar */
+    #sos{
+      background:#ff4d4d;
+      color:#fff;
+      text-align:center;
+      padding:10px;
+      font-weight:600;
+      font-size:16px;
+    }
 
-    .service-container{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
-    .service-box{background:#fff; padding:16px; border-radius:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-    .service-box h2{margin:10px 0; color:#000;} /* কালো করে দিলাম */
-    .service-box p{margin:10px 0; color:#000;} /* কালো করে দিলাম */
-    .service-box button{padding:8px 14px; border:none; background:var(--accent); color:#fff; border-radius:6px; cursor:pointer;}
+    /* Wrapper */
+    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
 
-    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
-    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
-    .btn.map{background:var(--map);}
-    .btn.fb{background:var(--fb);}
-    .btn.call{background:var(--call);}
-    .btn.pdf{background:var(--pdf);}
+    /* Section Titles */
+    h2.section-title{text-align:center; margin-bottom:30px; font-size:28px; color:#001f3f; font-weight:700;}
 
-    #sos{position:sticky; top:0; z-index:9999; background:#fff; color:#000; padding:10px; text-align:center; margin-bottom:10px;}
+    /* Profile Section */
+    .profile{background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06); text-align:center; margin-bottom:20px;}
+    .profile img{width:120px; border-radius:50%; margin-bottom:10px;}
+    .profile h2{margin-bottom:6px;}
+    .profile p{margin-bottom:0; color:#555;}
 
-    .links a{margin:5px; display:inline-block; padding:8px 14px; border-radius:6px; background:#e0e0e0; color:#000; text-decoration:none; font-weight:600;} /* কালো লেখা এবং হালকা ব্যাকগ্রাউন্ড */
+    /* Service Portal */
+    .service-container{display:grid; gap:20px; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin-bottom:20px;}
+    .service-box{
+      background:#fff; border-radius:10px; padding:16px; text-align:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1); color:#000;
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .service-box:hover{transform:translateY(-5px); box-shadow:0 6px 16px rgba(0,0,0,0.15);}
+    .service-box h2{margin:10px 0; color:#001f3f;}
+    .service-box p{margin:10px 0;}
+    .service-box button{
+      padding:8px 16px; border:none; border-radius:6px; background:var(--accent);
+      color:#fff; cursor:pointer; font-weight:600; transition:background 0.3s;
+    }
+    .service-box button:hover{background:#0059b3;}
 
-    footer{margin-top:26px; padding:18px; text-align:center; color:#000; background:#f0f0f0; font-size:14px;} /* কালো লেখা এবং হালকা ব্যাকগ্রাউন্ড */
+    /* Links Section */
+    .links{text-align:center; margin-bottom:20px;}
+    .links a{
+      display:inline-block; margin:5px; padding:8px 14px; border-radius:6px;
+      background:#1877f2; color:#fff; text-decoration:none; font-weight:600;
+      transition:background 0.3s;
+    }
+    .links a:hover{background:#005bb5;}
 
-    @media(max-width:420px){header img{height:60px;}}
+    /* Footer */
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px;}
+
+    /* WhatsApp Floating Button */
+    #whatsapp-button{
+      position:fixed; bottom:20px; right:20px; font-size:32px;
+      background:#25D366; color:#fff; border-radius:50%;
+      padding:12px; text-align:center; text-decoration:none;
+      box-shadow:0 3px 10px rgba(0,0,0,0.2); z-index:1000;
+      transition:transform 0.2s;
+    }
+    #whatsapp-button:hover{transform:scale(1.1);}
+
+    /* Responsive */
+    @media(max-width:480px){
+      header img{height:60px;}
+      .profile img{width:100px;}
+    }
   </style>
 </head>
 <body>
@@ -65,55 +110,56 @@
     </div>
   </header>
 
-  <!-- SOS Info -->
+  <!-- SOS -->
   <div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
 
+  <!-- Main Content -->
   <main class="wrap">
-    <!-- About Profile -->
+
+    <!-- Profile -->
     <section class="profile">
-      <img src="profile.jpg" alt="আমার প্রোফাইল" width="100">
+      <img src="profile.jpg" alt="আমার প্রোফাইল">
       <h2>Md Sahihen</h2>
       <p>Founder & CEO — Automobile Solution</p>
     </section>
 
-    <!-- Service Portal -->
+    <!-- Services -->
     <section class="service-portal">
       <h2 class="section-title">🚘 আমাদের সার্ভিস সমূহ</h2>
       <div class="service-container">
         <div class="service-box">
           <h2>Light Service</h2>
           <p>লাইট গাড়ির সার্ভিসিং ও মেরামত।</p>
-          <a href="services/light.html"><button>বিস্তারিত</button></a>
+          <button onclick="window.location.href='services/light.html'">বিস্তারিত</button>
         </div>
         <div class="service-box">
           <h2>Heavy Service</h2>
           <p>বাস, ট্রাক ও ভারী যানবাহনের সার্ভিসিং।</p>
-          <a href="services/heavy.html"><button>বিস্তারিত</button></a>
+          <button onclick="window.location.href='services/heavy.html'">বিস্তারিত</button>
         </div>
         <div class="service-box">
           <h2>Other Services</h2>
           <p>অন্যান্য সেবা</p>
-          <a href="services/other.html"><button>বিস্তারিত</button></a>
+          <button onclick="window.location.href='services/other.html'">বিস্তারিত</button>
         </div>
       </div>
     </section>
 
-    <!-- Links Section -->
-    <section>
-      <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
-      <div class="links">
-        <a href="https://whatsapp.com/dl/" target="_blank">WhatsApp</a>
-        <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank">Facebook</a>
-      </div>
+    <!-- Links -->
+    <section class="links">
+      <a href="https://wa.me/8801962419405" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank">Facebook</a>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
+  <a id="whatsapp-button" href="https://wa.me/8801962419405" target="_blank">📱</a>
 
 </body>
 </html>
