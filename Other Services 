@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- সূর্যের আলো -->
+  <section class="sun-light">
+    <h1>🌞 Our Services</h1>
+  </section>
+
+  <!-- প্রোফাইল -->
+  <section class="profile">
+    <img src="logo-services.png" alt="Our Services Logo">
+    <h2>Our Services Company</h2>
+    <p>আপনার সকল গাড়ির সমস্যা সমাধান</p>
+    <p>
+      <a href="https://goo.gl/maps/yourlocation" target="_blank">Google Location</a> |
+      <a href="https://facebook.com/ourservices" target="_blank">Facebook Page</a>
+    </p>
+  </section>
+
+  <!-- সার্ভিস -->
+  <section class="service-portal">
+    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
+    <div class="service-container">
+      <div class="service-box">
+        <h2>Tire Replacement</h2>
+        <p>গাড়ির টায়ার দ্রুত ও নিরাপদভাবে পরিবর্তন।</p>
+        <button>বিস্তারিত</button>
+      </div>
+      <div class="service-box">
+        <h2>AC Repair</h2>
+        <p>এসি সার্ভিস ও মেরামত।</p>
+        <button>বিস্তারিত</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
