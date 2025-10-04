@@ -1,36 +1,90 @@
-<!-- সূর্যের আলো -->
-<section class="sun-light">
-  <h1>🌞 শুভ সকাল</h1>
-</section>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Automobile Solution</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* সার্ভিস বক্স ইমেজ কভার */
+    .service-box {
+      width: 250px;
+      height: 200px;
+      border-radius: 15px;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
 
-<!-- প্রোফাইল -->
-<section class="profile">
-  <img src="profile.jpg" alt="আমার প্রোফাইল">
-  <h2>Md Sahihen</h2>
-  <p>Automobile Solution Founder</p>
-</section>
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
 
-<!-- সার্ভিস পোর্টাল -->
-<section class="service-portal">
-  <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
-  <div class="service-container">
-    <div class="service-box">
-      <h2>Car Repair</h2>
-      <p>দ্রুত ও বিশ্বস্ত গাড়ি মেরামত সার্ভিস।</p>
-      <button>বিস্তারিত</button>
+    .service-box h2, .service-box p {
+      margin: 0;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .service-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- সূর্যের আলো -->
+  <section class="sun-light">
+    <h1>🌞 Automobile Solution</h1>
+  </section>
+
+  <!-- প্রোফাইল সংক্ষিপ্ত -->
+  <section class="profile">
+    <img src="logo.png" alt="Automobile Solution Logo">
+    <h2>Automobile Solution</h2>
+    <p>আপনার সকল গাড়ির সমস্যা সমাধান</p>
+  </section>
+
+  <!-- সার্ভিস লিঙ্ক (ছবি কভার) -->
+  <section class="service-portal">
+    <h1>🚗 আমাদের সার্ভিসসমূহ</h1>
+    <div class="service-container">
+
+      <div class="service-box" style="background-image: url('images/light-vehicle.jpg');" onclick="location.href='light-vehicle/index.html'">
+        <div>
+          <h2>Light Vehicle</h2>
+          <p>লাইট ভেহিকেল সার্ভিস</p>
+        </div>
+      </div>
+
+      <div class="service-box" style="background-image: url('images/hello-other.jpg');" onclick="location.href='hello-other/index.html'">
+        <div>
+          <h2>Hello Other</h2>
+          <p>Hello Other সার্ভিস</p>
+        </div>
+      </div>
+
+      <div class="service-box" style="background-image: url('images/our-services.jpg');" onclick="location.href='our-services/index.html'">
+        <div>
+          <h2>Our Services</h2>
+          <p>আপনার সকল গাড়ির সমস্যা সমাধান</p>
+        </div>
+      </div>
+
     </div>
-    <div class="service-box">
-      <h2>Battery Change</h2>
-      <p>যে কোনো জায়গায় ব্যাটারি পরিবর্তন।</p>
-      <button>বিস্তারিত</button>
-    </div>
-    <div class="service-box">
-      <h2>Engine Checkup</h2>
-      <p>ইঞ্জিনের সম্পূর্ণ চেকআপ ও টিউনিং।</p>
-      <button>বিস্তারিত</button>
-    </div>
-  </div>
-</section>
+  </section>
+
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="bn">
