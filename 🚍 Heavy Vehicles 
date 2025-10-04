@@ -3,119 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automobile Solution</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Heavy Service — Automobile Solution</title>
+  <style>
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family:Arial,sans-serif; background:#f4f6f8; color:#222;}
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+    #sos{background:#ff4d4d; color:#fff; text-align:center; padding:10px; font-weight:600; font-size:16px;}
+    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
+    h2.section-title{text-align:center; margin-bottom:20px; font-size:28px; color:#001f3f; font-weight:700;}
+    p{margin-bottom:15px; line-height:1.5; color:#222;}
+    .btn{display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border:none; border-radius:6px; text-decoration:none; font-weight:600; cursor:pointer; transition:background 0.3s;}
+    .btn:hover{background:#0059b3;}
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px; margin-top:20px;}
+  </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>🚗 Automobile Solution</h1>
-    <p>Multiple workshops — Ready to serve</p>
-  </section>
+<header>
+  <img src="solution.jpeg" alt="Logo">
+  <div>
+    <div class="title">🚗 Automobile Solution</div>
+    <div class="tag">Heavy Service Details</div>
+  </div>
+</header>
 
-  <!-- Main Content -->
-  <main class="wrap">
+<div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
 
-    <!-- Heavy Vehicle Workshops -->
-    <h2 class="section-title">🚛 Heavy Vehicle Workshops</h2>
-    <div class="grid">
+<main class="wrap">
+  <h2 class="section-title">Heavy Service</h2>
+  <p>আমাদের Heavy Service মূলত বাস, ট্রাক ও ভারী যানবাহনের জন্য। এতে অন্তর্ভুক্ত:</p>
+  <ul>
+    <li>ইঞ্জিন ও ট্রান্সমিশন সার্ভিসিং</li>
+    <li>ব্রেক ও হাইড্রোলিক সিস্টেম চেক</li>
+    <li>সাসপেনশন ও স্টিয়ারিং সার্ভিসিং</li>
+    <li>ভারি মেরামত ও যান্ত্রিক কাজ</li>
+  </ul>
+  <p>সার্ভিস বুক করতে নিচের বাটনে ক্লিক করুন।</p>
+  <button class="btn" onclick="window.location.href='contact.html'">Book Now</button>
+</main>
 
-      <!-- Bahon Sheba -->
-      <article class="card">
-        <h3>Bahon Sheba</h3>
-        <img src="images/bahon.jpeg" alt="Bahon Logo" width="200" height="200">
-        <p><strong>ঠিকানা:</strong> বেরুলিয়া, মিরপুর রোড, ঢাকা</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801723818338">01723-818338</a></p>
-        <ul class="services-list">
-          <li>ডিজেল ইঞ্জিন রিপেয়ার</li>
-          <li>ক্লাচ ও গিয়ার সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-          <li>সাসপেনশন চেক</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/SFqBo2h4oEUnmFxi8" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/163YmNRnSR/" target="_blank" rel="noopener">🌐 Facebook</a>
-          <a class="btn pdf" href="bahon.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
-
-      <!-- Classic Service Center -->
-      <article class="card">
-        <h3>Classic Service Center</h3>
-        <img src="images/classic.jpeg" alt="Classic Logo" width="200" height="200">
-        <p><strong>ঠিকানা:</strong> বালিয়ারপুর, সাভার</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801763899728">01763-899728</a></p>
-        <ul class="services-list">
-          <li>ডিজেল ইঞ্জিন রিপেয়ার</li>
-          <li>ক্লাচ ও গিয়ার সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-          <li>সাসপেনশন চেক</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/NGoghSv6C3JsgbPM6" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/17Ghxmzm48/" target="_blank" rel="noopener">🌐 Facebook</a>
-          <a class="btn pdf" href="classic.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
-
-    </div> <!-- .grid -->
-
-    <!-- Light Vehicle Workshops -->
-    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
-    <div class="grid">
-
-      <!-- HRH Automobiles -->
-      <article class="card">
-        <h3>HRH Automobiles</h3>
-        <img src="images/hrh.jpg" alt="HRH Logo" width="200" height="200">
-        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801970138816">01970-138816</a>, <a class="btn call" href="tel:+8801917360011">01917-360011</a></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank" rel="noopener">🌐 Facebook</a>
-          <a class="btn pdf" href="hrh.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
-
-      <!-- Auto Tecnic -->
-      <article class="card">
-        <h3>Auto Tecnic</h3>
-        <img src="images/auto.jpeg" alt="Auto Tecnic Logo" width="200" height="200">
-        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801685093636">01685-093636</a>, <a class="btn call" href="tel:+8801712369797">01712-369797</a></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/Autotechnic41" target="_blank" rel="noopener">🌐 Facebook</a>
-          <a class="btn pdf" href="auto.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
-
-    </div> <!-- .grid -->
-
-  </main>
-
-  <footer>
-    © 2025 Automobile Solution — All Rights Reserved
-  </footer>
+<footer>
+  © 2025 Automobile Solution — All Rights Reserved
+</footer>
 
 </body>
 </html>
