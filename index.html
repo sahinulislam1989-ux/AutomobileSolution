@@ -77,29 +77,7 @@
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
 
-    /* SOS bar - কালো লেখা */
-    #sos{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
-      color:#000; /* লেখা কালো */
-      padding:10px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    #sos button{
-      border:0;
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:700;
-      cursor:pointer;
-      transition: background 0.2s;
-      color:#000; /* বাটনের লেখা কালো */
-    }
+    
 
     section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
     footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
@@ -127,26 +105,7 @@
       <div>
      <!-- বিশেষ লেখার জন্য আলাদা ক্লাস -->
 <div class="sos-info">জরুরী প্রয়োজনে ডান পাসের মোবাইল চিহ্ন দেওয়া আইকনে  whatsapp মেসেঞ্জারে মাধ্যমে যোগাযোগ করুন।</div>
-
- <style>
-  /* শুধু SOS তথ্যের জন্য */
-  .sos-info {
-    color: black;       /* লেখা কালো */
-    font-weight: 600;   /* গাঢ় করা */
-    font-size: 20px;    /* চাইলে আকার ঠিক করা */
-    margin-top: 10px;    /* হালকা ফাঁকা জায়গা */
-  }
- </style>
         
-<script>
-<!-- WhatsApp SOS Button -->
-<button id="sos-wa">WhatsApp SOS</button>
-  
-<script>
-<!-- Messenger Chat Plugin -->
-<div id="fb-root"></div>
-<div id="fb-customer-chat" class="fb-customerchat"></div>
-
 <script>
   var chatbox = document.getElementById('fb-customer-chat');
   chatbox.setAttribute("page_id", "100069418518261"); // আপনার Page ID
@@ -155,29 +114,6 @@
 
 <script>
   
-<!-- WhatsApp Script -->
-<script>
-document.getElementById('sos-wa').onclick = () => {
-  let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
-  let whatsappNumber = "8801962419405"; // আপনার WhatsApp নাম্বার
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(pos => {
-      const { latitude, longitude } = pos.coords;
-      const locationLink = https://www.google.com/maps?q=${latitude},${longitude};
-      const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${whatsappNumber};
-      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};
-      window.open(waLink, '_blank');
-    }, _err => {
-      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
-      window.open(waLink, '_blank');
-    }, { enableHighAccuracy:true, timeout:8000 });
-  } else {
-    const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
-    window.open(waLink, '_blank');
-  }
-};
-</script>
 
 <!-- Extra CSS for button -->
 <style>
@@ -196,6 +132,9 @@ document.getElementById('sos-wa').onclick = () => {
 }
 #sos-wa:hover { background: #1eb346; }
 
+<script>
+
+<script>
 
   <!-- প্রোফাইল সংক্ষিপ্ত -->
   <section class="profile">
@@ -260,7 +199,6 @@ document.getElementById('sos-wa').onclick = () => {
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
-
 
   <!-- WhatsApp floating button -->
   <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
