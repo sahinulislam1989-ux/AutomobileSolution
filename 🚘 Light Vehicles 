@@ -4,16 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Automobile Solution</title>
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#001f3f">
 </head>
-
 <body>
+
   <!-- Header -->
   <header>
     <img src="images/solution.jpeg" alt="Automobile Solution Logo">
@@ -30,7 +26,6 @@
 
   <!-- Main Content -->
   <main class="wrap">
-
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
 
     <div class="grid">
@@ -53,7 +48,7 @@
         <div class="buttons">
           <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
           <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="hrh.pdf" target="_blank">📑 Profile PDF</a>
+          <a class="btn pdf" href="pdf/hrh.pdf" target="_blank">📑 Profile PDF</a>
         </div>
       </article>
 
@@ -74,7 +69,7 @@
         <div class="buttons">
           <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank">📍 Google Map</a>
           <a class="btn fb" href="https://www.facebook.com/Autotechnic41" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="auto.pdf" target="_blank">📑 Profile PDF</a>
+          <a class="btn pdf" href="pdf/auto.pdf" target="_blank">📑 Profile PDF</a>
         </div>
       </article>
     </div>
