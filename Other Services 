@@ -5,46 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Other Services — Automobile Solution</title>
   <style>
-    :root{--brand:#001f3f;--accent:#0073e6;}
-    *{box-sizing:border-box; margin:0; padding:0;}
-    body{font-family:Arial,sans-serif; background:#f4f6f8; color:#222;}
-    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px;}
-    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    .title{font-size:22px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:14px;}
-    #sos{background:#ff4d4d; color:#fff; text-align:center; padding:10px; font-weight:600; font-size:16px;}
-    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
-    h2.section-title{text-align:center; margin-bottom:20px; font-size:28px; color:#001f3f; font-weight:700;}
-    p{margin-bottom:15px; line-height:1.5; color:#222;}
-    .btn{display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border:none; border-radius:6px; text-decoration:none; font-weight:600; cursor:pointer; transition:background 0.3s;}
-    .btn:hover{background:#0059b3;}
-    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px; margin-top:20px;}
+    body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#222;}
+    header {background:#001f3f; color:#fff; padding:16px; text-align:center;}
+    header img{height:60px; border-radius:8px; background:#fff; padding:6px;}
+    h1,h2{color:#001f3f; text-align:center;}
+    section{max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
+    ul{padding-left:20px;}
+    a.btn{display:inline-block; margin:10px 5px; padding:8px 14px; background:#001f3f; color:#fff; text-decoration:none; border-radius:6px;}
+    a.btn:hover{background:#004080;}
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; margin-top:20px;}
   </style>
 </head>
 <body>
 
 <header>
-  <img src="solution.jpeg" alt="Logo">
-  <div>
-    <div class="title">🚗 Automobile Solution</div>
-    <div class="tag">Other Services Details</div>
-  </div>
+  <img src="../images/solution.jpeg" alt="Automobile Solution Logo">
+  <h1>Other Services</h1>
 </header>
 
-<div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
-
-<main class="wrap">
-  <h2 class="section-title">Other Services</h2>
-  <p>আমরা অন্যান্য সার্ভিসও প্রদান করি:</p>
+<section>
+  <h2>অন্যান্য সেবা</h2>
   <ul>
-    <li>ভাড়া গাড়ির রক্ষণাবেক্ষণ</li>
-    <li>বিমানবন্দর/হোটেল Pick & Drop সার্ভিস</li>
-    <li>গাড়ির ইনস্টলেশন ও ছোটখাটো মেরামত</li>
-    <li>কাস্টমার সার্ভিস ও পরামর্শ</li>
+    <li>AC সার্ভিস ও ফ্রিজিং</li>
+    <li>বড় টায়ার চেক ও রিপ্লেস</li>
+    <li>ব্যাটারি ও বৈদ্যুতিক কাজ</li>
+    <li>স্পেয়ার পার্টস সাপোর্ট</li>
+    <li>অ্যাডিশনাল সার্ভিস</li>
   </ul>
-  <p>সার্ভিস বুক করতে নিচের বাটনে ক্লিক করুন।</p>
-  <button class="btn" onclick="window.location.href='contact.html'">Book Now</button>
-</main>
+  <div style="text-align:center;">
+    <a href="../index.html" class="btn">🏠 Back to Home</a>
+    <a href="light.html" class="btn">Light Services</a>
+    <a href="heavy.html" class="btn">Heavy Services</a>
+  </div>
+</section>
 
 <footer>
   © 2025 Automobile Solution — All Rights Reserved
