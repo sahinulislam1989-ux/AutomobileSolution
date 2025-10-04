@@ -5,58 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Light Service — Automobile Solution</title>
   <style>
-    :root{
-      --brand:#001f3f;
-      --accent:#0073e6;
-      --fb:#1877f2;
-      --map:#e74c3c;
-      --pdf:#8e44ad;
-      --call:#28a745;
-    }
-    *{box-sizing:border-box; margin:0; padding:0;}
-    body{font-family:Arial,sans-serif; background:#f4f6f8; color:#222;}
-
-    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px;}
-    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    .title{font-size:22px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:14px;}
-
-    #sos{background:#ff4d4d; color:#fff; text-align:center; padding:10px; font-weight:600; font-size:16px;}
-
-    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
-    h2.section-title{text-align:center; margin-bottom:20px; font-size:28px; color:#001f3f; font-weight:700;}
-    p{margin-bottom:15px; line-height:1.5; color:#222;}
-
-    .btn{display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border:none; border-radius:6px; text-decoration:none; font-weight:600; cursor:pointer; transition:background 0.3s;}
-    .btn:hover{background:#0059b3;}
-
-    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px; margin-top:20px;}
+    body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#222;}
+    header {background:#001f3f; color:#fff; padding:16px; text-align:center;}
+    header img{height:60px; border-radius:8px; background:#fff; padding:6px;}
+    h1,h2{color:#001f3f; text-align:center;}
+    section{max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
+    ul{padding-left:20px;}
+    a.btn{display:inline-block; margin:10px 5px; padding:8px 14px; background:#001f3f; color:#fff; text-decoration:none; border-radius:6px;}
+    a.btn:hover{background:#004080;}
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; margin-top:20px;}
   </style>
 </head>
 <body>
 
 <header>
-  <img src="solution.jpeg" alt="Logo">
-  <div>
-    <div class="title">🚗 Automobile Solution</div>
-    <div class="tag">Light Service Details</div>
-  </div>
+  <img src="../images/solution.jpeg" alt="Automobile Solution Logo">
+  <h1>Light Service</h1>
 </header>
 
-<div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
-
-<main class="wrap">
-  <h2 class="section-title">Light Service</h2>
-  <p>আমাদের Light Service মূলত ব্যক্তিগত বা ছোট গাড়ির জন্য। এতে অন্তর্ভুক্ত:</p>
+<section>
+  <h2>লাইট গাড়ির সার্ভিসিং ও মেরামত</h2>
   <ul>
-    <li>ইঞ্জিন অয়েল পরিবর্তন</li>
-    <li>ব্রেক ও ফিল্টার চেক</li>
-    <li>বাতি ও ব্যাটারি চেক</li>
-    <li>ছোটখাটো মেরামত ও সার্ভিসিং</li>
+    <li>ইঞ্জিন চেক ও মেরামত</li>
+    <li>অয়েল চেঞ্জ ও ফিল্টার সার্ভিস</li>
+    <li>ব্রেক সার্ভিস</li>
+    <li>বাতি ও বৈদ্যুতিক পরীক্ষা</li>
+    <li>মিনর বডি ও পেইন্ট সার্ভিস</li>
   </ul>
-  <p>আপনি চাইলে নিচের বাটনে ক্লিক করে সরাসরি সার্ভিস বুক করতে পারেন।</p>
-  <button class="btn" onclick="window.location.href='contact.html'">Book Now</button>
-</main>
+  <div style="text-align:center;">
+    <a href="../index.html" class="btn">🏠 Back to Home</a>
+    <a href="other.html" class="btn">Other Services</a>
+  </div>
+</section>
 
 <footer>
   © 2025 Automobile Solution — All Rights Reserved
