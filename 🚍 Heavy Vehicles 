@@ -32,87 +32,12 @@
     <p>আপনার জন্য সেরা সার্ভিস প্রদানকারী</p>
     </p>
   </section>
-
-  <!-- সার্ভিস -->
-  <section class="service-portal">
-    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
-    <div class="service-container">
-      <div class="service-box">
-        <h2>Engine Checkup</h2>
-        <p>ইঞ্জিনের সম্পূর্ণ চেকআপ ও টিউনিং।</p>
-        <button>বিস্তারিত</button>
-      </div>
-      <div class="service-box">
-        <h2>Oil Change</h2>
-        <p>গাড়ির তেল দ্রুত ও নির্ভরযোগ্যভাবে পরিবর্তন।</p>
-        <button>বিস্তারিত</button>
-      </div>
-    </div>
-  </section>
-
-</body>
-</html></title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-
-  <!-- সার্ভিস -->
-  <section class="service-portal">
-    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
-    <div class="service-container">
-      <div class="service-box">
-        <h2>Engine Checkup</h2>
-        <p>ইঞ্জিনের সম্পূর্ণ চেকআপ ও টিউনিং।</p>
-        <button>বিস্তারিত</button>
-      </div>
-      <div class="service-box">
-        <h2>Oil Change</h2>
-        <p>গাড়ির তেল দ্রুত ও নির্ভরযোগ্যভাবে পরিবর্তন।</p>
-        <button>বিস্তারিত</button>
-      </div>
-    </div>
-  </section>
-
-</body>
-</html> -->
-  <section class="sun-light">
-    <h1>🌞 Hello Other Services</h1>
-  </section>
-
-  <!-- প্রোফাইল -->
-  <section class="profile">
-    <img src="logo-hello.png" alt="Hello Other Logo">
-    <h2>Hello Other Ltd.</h2>
-    <p>আপনার জন্য সেরা সার্ভিস প্রদানকারী</p>
-    <p>
-      <a href="https://goo.gl/maps/yourlocation" target="_blank">Google Location</a> |
-      <a href="https://facebook.com/helloother" target="_blank">Facebook Page</a>
-    </p>
-  </section>
-
-  <!-- সার্ভিস -->
-  <section class="service-portal">
-    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
-    <div class="service-container">
-      <div class="service-box">
-        <h2>Engine Checkup</h2>
-        <p>ইঞ্জিনের সম্পূর্ণ চেকআপ ও টিউনিং।</p>
-        <button>বিস্তারিত</button>
-      </div>
-      <div class="service-box">
-        <h2>Oil Change</h2>
-        <p>গাড়ির তেল দ্রুত ও নির্ভরযোগ্যভাবে পরিবর্তন।</p>
-        <button>বিস্তারিত</button>
-      </div>
-    </div>
-  </section>
-
 </body>
 </html>
 
 </div> <!-- .grid -->
 
-         <main class="wrap">
+    <main class="wrap">
     <!-- Heavy Vehicle Workshops -->
     <h2 class="section-title">🚛 Heavy Vehicle Workshops</h2>
     <div class="grid">
