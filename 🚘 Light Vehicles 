@@ -10,10 +10,29 @@
 <header>
   <h1>Light Service</h1>
 </header>
+
 <main class="wrap">
-  <p>লাইট গাড়ির সার্ভিসিং ও মেরামতের বিস্তারিত তথ্য এখানে থাকবে।</p>
-  <button onclick="window.location.href='../index.html'">Back to Home</button>
+  <h2>আমাদের সার্ভিস করা গাড়ি</h2>
+  
+  <div class="service-box">
+    <h3>Toyota Corolla</h3>
+    <p>ঠিকানা: ঢাকা, বাংলাদেশ</p>
+    <p>সার্ভিসের ধরন: ইঞ্জিন চেক, তেল পরিবর্তন, ব্রেক চেকআপ</p>
+    <button onclick="window.location.href='../index.html'">Back to Home</button>
+  </div>
+
+  <!-- আপনি চাইলে এখান আরও গাড়ি যুক্ত করতে পারেন -->
+  <!-- উদাহরণ: 
+  <div class="service-box">
+    <h3>Honda Civic</h3>
+    <p>ঠিকানা: চট্টগ্রাম, বাংলাদেশ</p>
+    <p>সার্ভিসের ধরন: এয়ার কন্ডিশনার চেক, ব্যাটারি পরিবর্তন</p>
+    <button onclick="window.location.href='../index.html'">Back to Home</button>
+  </div>
+  -->
+  
 </main>
+
 <footer>© 2025 Automobile Solution</footer>
 </body>
 </html>
