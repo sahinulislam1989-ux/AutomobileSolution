@@ -2,43 +2,53 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>Our Services</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Other Services — Automobile Solution</title>
+  <style>
+    :root{--brand:#001f3f;--accent:#0073e6;}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family:Arial,sans-serif; background:#f4f6f8; color:#222;}
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+    #sos{background:#ff4d4d; color:#fff; text-align:center; padding:10px; font-weight:600; font-size:16px;}
+    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
+    h2.section-title{text-align:center; margin-bottom:20px; font-size:28px; color:#001f3f; font-weight:700;}
+    p{margin-bottom:15px; line-height:1.5; color:#222;}
+    .btn{display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border:none; border-radius:6px; text-decoration:none; font-weight:600; cursor:pointer; transition:background 0.3s;}
+    .btn:hover{background:#0059b3;}
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px; margin-top:20px;}
+  </style>
 </head>
 <body>
 
-  <!-- সূর্যের আলো -->
-  <section class="sun-light">
-    <h1>🌞 Our Services</h1>
-  </section>
+<header>
+  <img src="solution.jpeg" alt="Logo">
+  <div>
+    <div class="title">🚗 Automobile Solution</div>
+    <div class="tag">Other Services Details</div>
+  </div>
+</header>
 
-  <!-- প্রোফাইল -->
-  <section class="profile">
-    <img src="logo-services.png" alt="Our Services Logo">
-    <h2>Our Services Company</h2>
-    <p>আপনার সকল গাড়ির সমস্যা সমাধান</p>
-    <p>
-      <a href="https://goo.gl/maps/yourlocation" target="_blank">Google Location</a> |
-      <a href="https://facebook.com/ourservices" target="_blank">Facebook Page</a>
-    </p>
-  </section>
+<div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
 
-  <!-- সার্ভিস -->
-  <section class="service-portal">
-    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
-    <div class="service-container">
-      <div class="service-box">
-        <h2>Tire Replacement</h2>
-        <p>গাড়ির টায়ার দ্রুত ও নিরাপদভাবে পরিবর্তন।</p>
-        <button>বিস্তারিত</button>
-      </div>
-      <div class="service-box">
-        <h2>AC Repair</h2>
-        <p>এসি সার্ভিস ও মেরামত।</p>
-        <button>বিস্তারিত</button>
-      </div>
-    </div>
-  </section>
+<main class="wrap">
+  <h2 class="section-title">Other Services</h2>
+  <p>আমরা অন্যান্য সার্ভিসও প্রদান করি:</p>
+  <ul>
+    <li>ভাড়া গাড়ির রক্ষণাবেক্ষণ</li>
+    <li>বিমানবন্দর/হোটেল Pick & Drop সার্ভিস</li>
+    <li>গাড়ির ইনস্টলেশন ও ছোটখাটো মেরামত</li>
+    <li>কাস্টমার সার্ভিস ও পরামর্শ</li>
+  </ul>
+  <p>সার্ভিস বুক করতে নিচের বাটনে ক্লিক করুন।</p>
+  <button class="btn" onclick="window.location.href='contact.html'">Book Now</button>
+</main>
+
+<footer>
+  © 2025 Automobile Solution — All Rights Reserved
+</footer>
 
 </body>
 </html>
