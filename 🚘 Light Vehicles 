@@ -3,82 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Automobile Solution</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#001f3f">
+  <title>Light Service — Automobile Solution</title>
+  <style>
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+      --fb:#1877f2;
+      --map:#e74c3c;
+      --pdf:#8e44ad;
+      --call:#28a745;
+    }
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{font-family:Arial,sans-serif; background:#f4f6f8; color:#222;}
+
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:12px;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+
+    #sos{background:#ff4d4d; color:#fff; text-align:center; padding:10px; font-weight:600; font-size:16px;}
+
+    .wrap{max-width:1200px; margin:20px auto; padding:0 10px;}
+    h2.section-title{text-align:center; margin-bottom:20px; font-size:28px; color:#001f3f; font-weight:700;}
+    p{margin-bottom:15px; line-height:1.5; color:#222;}
+
+    .btn{display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border:none; border-radius:6px; text-decoration:none; font-weight:600; cursor:pointer; transition:background 0.3s;}
+    .btn:hover{background:#0059b3;}
+
+    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; font-size:14px; margin-top:20px;}
+  </style>
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>🚗 Automobile Solution</h1>
-      <p>Multiple workshops — Ready to serve</p>
-      <a href="#sos" class="btn hero-btn">জরুরি সহায়তা দেখুন</a>
-    </div>
-  </section>
+<header>
+  <img src="solution.jpeg" alt="Logo">
+  <div>
+    <div class="title">🚗 Automobile Solution</div>
+    <div class="tag">Light Service Details</div>
+  </div>
+</header>
 
-  <!-- SOS Section -->
-  <section id="sos">
-    <span class="sos-info">📞 জরুরি সহায়তা: 01970-138816</span>
-  </section>
+<div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
 
-  <!-- Main Content -->
-  <main class="wrap">
-    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
+<main class="wrap">
+  <h2 class="section-title">Light Service</h2>
+  <p>আমাদের Light Service মূলত ব্যক্তিগত বা ছোট গাড়ির জন্য। এতে অন্তর্ভুক্ত:</p>
+  <ul>
+    <li>ইঞ্জিন অয়েল পরিবর্তন</li>
+    <li>ব্রেক ও ফিল্টার চেক</li>
+    <li>বাতি ও ব্যাটারি চেক</li>
+    <li>ছোটখাটো মেরামত ও সার্ভিসিং</li>
+  </ul>
+  <p>আপনি চাইলে নিচের বাটনে ক্লিক করে সরাসরি সার্ভিস বুক করতে পারেন।</p>
+  <button class="btn" onclick="window.location.href='contact.html'">Book Now</button>
+</main>
 
-    <div class="grid">
-      <!-- HRH Automobiles -->
-      <article class="card">
-        <h3><img src="images/hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
-        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> 
-          <a class="btn call" href="tel:+8801970138816">01970-138816</a>,
-          <a class="btn call" href="tel:+8801917360011">01917-360011</a>
-        </p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="pdf/hrh.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
+<footer>
+  © 2025 Automobile Solution — All Rights Reserved
+</footer>
 
-      <!-- Auto Tecnic -->
-      <article class="card">
-        <h3><img src="images/auto.jpeg" alt="Auto Tecnic"> Auto Tecnic</h3>
-        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> 
-          <a class="btn call" href="tel:+8801685093636">01685-093636</a>,
-          <a class="btn call" href="tel:+8801712369797">01712-369797</a>
-        </p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/Autotechnic41" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="pdf/auto.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
-    </div>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 Automobile Solution — All Rights Reserved
-  </footer>
 </body>
 </html>
