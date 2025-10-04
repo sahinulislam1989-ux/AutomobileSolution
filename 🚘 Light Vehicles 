@@ -10,14 +10,14 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <img src="images/solution.jpeg" alt="Automobile Solution Logo">
-    <div>
-      <div class="title">🚗 Automobile Solution</div>
-      <div class="tag">Multiple workshops — Ready to serve</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>🚗 Automobile Solution</h1>
+      <p>Multiple workshops — Ready to serve</p>
+      <a href="#sos" class="btn hero-btn">জরুরি সহায়তা দেখুন</a>
     </div>
-  </header>
+  </section>
 
   <!-- SOS Section -->
   <section id="sos">
