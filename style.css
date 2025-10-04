@@ -7,8 +7,8 @@ body {
   color: #333;
 }
 
-/* 🔆 সূর্যের আলো effect */
-.sun-light {
+/*অটোমোবাইল সলিউশন*/
+.light-Vehicle  {
   width: 100%;
   height: 300px;
   background: radial-gradient(circle at center, #fff176, #ff9800, #f44336);
@@ -24,7 +24,7 @@ body {
   100% { background: radial-gradient(circle at center, #fffde7, #ffcc80, #e65100); }
 }
 
-.sun-light h1 {
+.light-vehicle h1 {
   color: white;
   font-size: 40px;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
