@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Vehicle Services</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- সূর্যের আলো -->
+  <section class="sun-light">
+    <h1>🌞 Light Vehicle Services</h1>
+  </section>
+
+  <!-- প্রোফাইল -->
+  <section class="profile">
+    <img src="logo-light.png" alt="Light Vehicle Logo">
+    <h2>Light Vehicle Limited</h2>
+    <p>গাড়ি মেরামত ও সার্ভিস প্রদানকারী</p>
+    <p>
+      <a href="https://goo.gl/maps/yourlocation" target="_blank">Google Location</a> |
+      <a href="https://facebook.com/lightvehicle" target="_blank">Facebook Page</a>
+    </p>
+  </section>
+
+  <!-- সার্ভিস -->
+  <section class="service-portal">
+    <h1>🚗 আমাদের সার্ভিস সমূহ</h1>
+    <div class="service-container">
+      <div class="service-box">
+        <h2>Car Repair</h2>
+        <p>দ্রুত ও বিশ্বস্ত গাড়ি মেরামত সার্ভিস।</p>
+        <button>বিস্তারিত</button>
+      </div>
+      <div class="service-box">
+        <h2>Battery Change</h2>
+        <p>যে কোনো জায়গায় ব্যাটারি পরিবর্তন।</p>
+        <button>বিস্তারিত</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
