@@ -154,23 +154,7 @@
 </script>
 
 <script>
-  // Facebook Messenger Chat plugin
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml: true,
-      version: 'v17.0'
-    });
-  };
-
-  (function(d, s, id){
-    let js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
+  
 <!-- WhatsApp Script -->
 <script>
 document.getElementById('sos-wa').onclick = () => {
@@ -212,15 +196,6 @@ document.getElementById('sos-wa').onclick = () => {
 }
 #sos-wa:hover { background: #1eb346; }
 
-/* Messenger Icon floating */
-.fb-customerchat {
-  position: fixed !important;
-  bottom: 20px !important;
-  right: 20px !important;
-  z-index: 9999;
-}
-</style>;
-</script>
 
   <!-- প্রোফাইল সংক্ষিপ্ত -->
   <section class="profile">
@@ -241,16 +216,16 @@ document.getElementById('sos-wa').onclick = () => {
         </div>
       </div>
 
-      <div class="service-box" style="background-image: url('images/hello-other.jpg');" onclick="location.href='hello-other/index.html'">
+      <div class="service-box" style="background-image: url('images/hello-other.jpg');" onclick="location.href='Heavy-Vehicle/index.html'">
         <div>
-          <h2>Hello Other</h2>
-          <p>Hello Other সার্ভিস</p>
+          <h2>Heavy Vehicle</h2>
+          <p>Heavy Vehicle</p>
         </div>
       </div>
 
-      <div class="service-box" style="background-image: url('images/our-services.jpg');" onclick="location.href='our-services/index.html'">
+      <div class="service-box" style="background-image: url('images/our-services.jpg');" onclick="location.href='other-services/index.html'">
         <div>
-          <h2>Our Services</h2>
+          <h2>Other Services</h2>
           <p>আপনার সকল গাড়ির সমস্যা সমাধান</p>
         </div>
       </div>
@@ -260,18 +235,6 @@ document.getElementById('sos-wa').onclick = () => {
 
 </body>
 </html>  
-  
-    <!-- MVP Plan -->
-    <section>
-      <h2>📌 MVP রিলিজ প্লান</h2>
-      <ul>
-        <li>SOS ও WhatsApp সংযোগ চালু</li>
-        <li>GPS লোকেশন শেয়ারিং</li>
-        <li>সরাসরি লাইভ চ্যাট সাপোর্ট</li>
-        <li>সার্ভিস সেন্টার লিস্ট ও ম্যাপ লোকেশন</li>
-        <li>প্রাথমিক কাস্টমার অ্যাপ (পরে যুক্ত হবে)</li>
-      </ul>
-    </section>
 
     <!-- Security & Operations -->
     <section>
@@ -291,47 +254,6 @@ document.getElementById('sos-wa').onclick = () => {
     <a href=" https://whatsapp.com/dl/" target="_blank" class="btn-map"> whatsapp.com</a>
     <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank" class="btn-fb">📘 Facebook</a>
   </div>
-
-  <!-- SOS & Location Share Buttons -->
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="sendSOS()" 
-            style="background:#fff; color:#000; padding:12px 20px; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:5px;">
-      🚨 SOS
-    </button>
-
-    <button onclick="shareLocation()" 
-            style="background:#fff; color:#000; padding:12px 20px; border:none; border-radius:6px; font-size:16px; cursor:pointer; margin:5px;">
-      📍 লোকেশন শেয়ার
-    </button>
-  </div>
-  
-</section>
-
-<!-- Script রাখবেন footer এর উপরে -->
-<script>
-  function sendSOS() {
-    let whatsappNumber = "8801962419405"; // আপনার WhatsApp নাম্বার
-    let message = "🚨 জরুরি সাহায্য দরকার! দয়া করে দ্রুত যোগাযোগ করুন।";
-    let whatsappLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
-    window.open(whatsappLink, "_blank");
-  }
-
-  function shareLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        let latitude = position.coords.latitude;
-        let longitude = position.coords.longitude;
-        let locationLink = https://www.google.com/maps?q=${latitude},${longitude};
-        let whatsappNumber = "8801962419405"; 
-        let whatsappLink = https://wa.me/${whatsappNumber}?text=📍 আমার লোকেশন: ${locationLink};
-        window.open(whatsappLink, "_blank");
-      });
-    } else {
-      alert("আপনার ডিভাইসে লোকেশন শেয়ার সাপোর্ট করছে না।");
-    }
-  }
-</script>
-    </section>
 
   </main>
 
