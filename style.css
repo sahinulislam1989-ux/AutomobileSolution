@@ -1,0 +1,107 @@
+/* পুরো বডি */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* 🔆 সূর্যের আলো effect */
+.sun-light {
+  width: 100%;
+  height: 300px;
+  background: radial-gradient(circle at center, #fff176, #ff9800, #f44336);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: sunrise 8s infinite alternate;
+}
+
+@keyframes sunrise {
+  0%   { background: radial-gradient(circle at center, #fff59d, #ff9800, #f44336); }
+  50%  { background: radial-gradient(circle at center, #fff176, #ffb74d, #ff5722); }
+  100% { background: radial-gradient(circle at center, #fffde7, #ffcc80, #e65100); }
+}
+
+.sun-light h1 {
+  color: white;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* প্রোফাইল সেকশন */
+.profile {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.profile h2 {
+  margin: 15px 0 5px;
+  color: #007bff;
+}
+
+.profile p {
+  margin: 0;
+  color: #555;
+}
+
+/* সার্ভিস পোর্টাল */
+.service-portal {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+}
+
+.service-portal h1 {
+  margin-bottom: 30px;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-box {
+  background: white;
+  color: #333;
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.service-box h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.service-box button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.service-box button:hover {
+  background: #0056b3;
+}
