@@ -1,38 +1,56 @@
+/* মূল বডি */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   background: #f4f6f8;
   color: #333;
 }
 
-/*অটোমোবাইল সলিউশন*/
-.Automobile Solution {
+/* 🌞 অটোমোবাইল সলিউশন ব্যানার */
+.AutomobileSolution {
   width: 100%;
-  height: 300px;
+  height: 280px;
   background: radial-gradient(circle at center, #fff176, #ff9800, #f44336);
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: sunrise 8s infinite alternate;
+  animation: sunrise 6s infinite alternate;
+  text-align: center;
+  flex-direction: column;
 }
 
 @keyframes sunrise {
-  0%   { background: radial-gradient(circle at center, #fff59d, #ff9800, #f44336); }
-  50%  { background: radial-gradient(circle at center, #fff176, #ffb74d, #ff5722); }
-  100% { background: radial-gradient(circle at center, #fffde7, #ffcc80, #e65100); }
+  0% {
+    background: radial-gradient(circle at center, #fff59d, #ff9800, #f44336);
+  }
+  50% {
+    background: radial-gradient(circle at center, #fff176, #ffb74d, #ff5722);
+  }
+  100% {
+    background: radial-gradient(circle at center, #fffde7, #ffcc80, #e65100);
+  }
 }
 
-.Automobile Solution h1 {
+.AutomobileSolution h1 {
   color: white;
-  font-size: 40px;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  font-size: 42px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  margin: 0;
 }
 
-/* প্রোফাইল সেকশন */
+.AutomobileSolution p {
+  color: #fff8e1;
+  font-size: 18px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* 👤 প্রোফাইল সেকশন */
 .profile {
   text-align: center;
   padding: 40px 20px;
+  background: #fff;
 }
 
 .profile img {
@@ -40,7 +58,7 @@ body {
   height: 150px;
   border-radius: 50%;
   border: 4px solid #007bff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .profile h2 {
@@ -53,16 +71,17 @@ body {
   color: #555;
 }
 
-/* সার্ভিস পোর্টাল */
+/* 🚗 সার্ভিস পোর্টাল */
 .service-portal {
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
 }
 
 .service-portal h1 {
   margin-bottom: 30px;
+  font-size: 32px;
 }
 
 .service-container {
@@ -72,24 +91,30 @@ body {
   gap: 20px;
 }
 
+/* 🧰 সার্ভিস বক্স */
 .service-box {
   background: white;
   color: #333;
   width: 250px;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service-box:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .service-box h2 {
   margin-top: 0;
   color: #007bff;
+}
+
+.service-box p {
+  font-size: 14px;
+  color: #555;
 }
 
 .service-box button {
@@ -99,8 +124,19 @@ body {
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .service-box button:hover {
   background: #0056b3;
+}
+
+/* 📱 রেসপনসিভ */
+@media (max-width: 600px) {
+  .AutomobileSolution h1 {
+    font-size: 32px;
+  }
+  .service-box {
+    width: 90%;
+  }
 }
