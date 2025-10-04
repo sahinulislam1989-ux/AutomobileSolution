@@ -1,17 +1,12 @@
-<!DOCTYPE html>ৃ
-<html lang="bn">
-<head>
-  <!DOCTYPE html>ৃ
+<!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Automobile Solution</title>
-
-  <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#001f3f">
-<style>
+  <style>
     :root{
       --brand:#001f3f;
       --accent:#0073e6;
@@ -20,20 +15,29 @@
       --pdf:#8e44ad;
       --call:#28a745;
     }
-    *{box-sizing:border-box}
+    *{box-sizing:border-box;}
     body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
-    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    
+    header{background:var(--brand); color:#fff; padding:16px; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
     header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
     header .title{font-size:22px; font-weight:700;}
     .tag{color:#e6eefc; font-size:14px;}
+
     .wrap{width:92%; max-width:1100px; margin:20px auto;}
     h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
+    
     .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
     .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
     .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
     .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
     .card p, .card li { color:#222; }
-    .services-list{padding-left:18px; margin:8px 0;}
+
+    .service-container{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+    .service-box{background:#fff; padding:16px; border-radius:10px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .service-box h2{margin:10px 0; color:#000;} /* কালো করে দিলাম */
+    .service-box p{margin:10px 0; color:#000;} /* কালো করে দিলাম */
+    .service-box button{padding:8px 14px; border:none; background:var(--accent); color:#fff; border-radius:6px; cursor:pointer;}
+
     .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
     .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
     .btn.map{background:var(--map);}
@@ -41,39 +45,13 @@
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
 
-    /* SOS bar - কালো লেখা */
-    #sos{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
-      color:#000; /* লেখা কালো */
-      padding:10px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    #sos button{
-      border:0;
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:700;
-      cursor:pointer;
-      transition: background 0.2s;
-      color:#000; /* বাটনের লেখা কালো */
-    }
+    #sos{position:sticky; top:0; z-index:9999; background:#fff; color:#000; padding:10px; text-align:center; margin-bottom:10px;}
 
-    section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
-    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
+    .links a{margin:5px; display:inline-block; padding:8px 14px; border-radius:6px; background:#e0e0e0; color:#000; text-decoration:none; font-weight:600;} /* কালো লেখা এবং হালকা ব্যাকগ্রাউন্ড */
 
-    @media (max-width:420px){
-      header {padding:12px;}
-      .btn{font-size:13px; padding:7px 10px;}
-      header img{height:80px;}
-      .card h3 img{width:50px; height:50px;}
-    }
+    footer{margin-top:26px; padding:18px; text-align:center; color:#000; background:#f0f0f0; font-size:14px;} /* কালো লেখা এবং হালকা ব্যাকগ্রাউন্ড */
+
+    @media(max-width:420px){header img{height:60px;}}
   </style>
 </head>
 <body>
@@ -86,112 +64,55 @@
       <div class="tag">Multiple workshops — Ready to serve</div>
     </div>
   </header>
-        <div class="buttons">
-          <a class="btn fb" href="https://www.facebook.com/share/17EkckTb3U/" target="_blank" rel="noopener">🌐 Facebook</a>
-      <div>
-     <!-- বিশেষ লেখার জন্য আলাদা ক্লাস -->
-<div class="sos-info">জরুরী প্রয়োজনে ডান পাসের মোবাইল চিহ্ন দেওয়া আইকনে  whatsapp মেসেঞ্জারে মাধ্যমে যোগাযোগ করুন।</div>
 
-  <title>Automobile Solution</title>
+  <!-- SOS Info -->
+  <div id="sos">জরুরী প্রয়োজনে WhatsApp বা ফোনে যোগাযোগ করুন।</div>
 
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#001f3f">
-<style>
-    :root{
-      --brand:#001f3f;
-      --accent:#0073e6;
-      --fb:#1877f2;
-      --map:#e74c3c;
-      --pdf:#8e44ad;
-      --call:#28a745;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
-    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    header .title{font-size:22px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:14px;}
-    .wrap{width:92%; max-width:1100px; margin:20px auto;}
-    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
-    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
-    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
-    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
-    .card p, .card li { color:#222; }
-    .services-list{padding-left:18px; margin:8px 0;}
-    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
-    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
-    .btn.map{background:var(--map);}
-    .btn.fb{background:var(--fb);}
-    .btn.call{background:var(--call);}
-    .btn.pdf{background:var(--pdf);}
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-
-  <!-- 'Automobile Solution' -->
-  <section class="Automobile Solution">
-    <h1>Automobile Solution</h1>
-  </section>
-
-  <!-- 👤 প্রোফাইল -->
-  <section class="profile">
-    <img src="profile.jpg" alt="আমার প্রোফাইল">
-    <h2>Md Sahihen</h2>
-    <p>Founder & CEO — Automobile Solution</p>
-  </section>
-
-  <!-- 🚗 সার্ভিস পোর্টাল -->
-  <section class="service-portal">
-    <h1>🚘 আমাদের সার্ভিস সমূহ</h1>
-
-    <div class="service-container">
-
-      <!-- Light Service -->
-      <div class="service-box">
-        <h2>Light Service</h2>
-        <p>লাইট গাড়ির সার্ভিসিং ও মেরামত।</p>
-        <a href="services/light.html"><button>বিস্তারিত</button></a>
-      </div>
-
-      <!-- Heavy Service -->
-      <div class="service-box">
-        <h2>Heavy Service</h2>
-        <p>বাস, ট্রাক ও ভারী যানবাহনের সার্ভিসিং।</p>
-        <a href="services/heavy.html"><button>বিস্তারিত</button></a>
-      </div>
-
-      <!-- Other Service -->
-      <div class="service-box">
-        <h2>Other Services</h2>
-        <p>অন্যান সেবা</p>
-        <a href="services/other.html"><button>বিস্তারিত</button></a>
-      </div>
-  </section>
-    <!-- Contact / Links -->
-    <section>
-      <!-- Links Section -->
-<section>
-  <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
-  <div class="links">
-    <a href=" https://whatsapp.com/dl/" target="_blank" class="btn-map"> whatsapp.com</a>
-    <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank" class="btn-fb">📘 Facebook</a>
-  </div>
-</script>
+  <main class="wrap">
+    <!-- About Profile -->
+    <section class="profile">
+      <img src="profile.jpg" alt="আমার প্রোফাইল" width="100">
+      <h2>Md Sahihen</h2>
+      <p>Founder & CEO — Automobile Solution</p>
     </section>
 
+    <!-- Service Portal -->
+    <section class="service-portal">
+      <h2 class="section-title">🚘 আমাদের সার্ভিস সমূহ</h2>
+      <div class="service-container">
+        <div class="service-box">
+          <h2>Light Service</h2>
+          <p>লাইট গাড়ির সার্ভিসিং ও মেরামত।</p>
+          <a href="services/light.html"><button>বিস্তারিত</button></a>
+        </div>
+        <div class="service-box">
+          <h2>Heavy Service</h2>
+          <p>বাস, ট্রাক ও ভারী যানবাহনের সার্ভিসিং।</p>
+          <a href="services/heavy.html"><button>বিস্তারিত</button></a>
+        </div>
+        <div class="service-box">
+          <h2>Other Services</h2>
+          <p>অন্যান্য সেবা</p>
+          <a href="services/other.html"><button>বিস্তারিত</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Links Section -->
+    <section>
+      <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
+      <div class="links">
+        <a href="https://whatsapp.com/dl/" target="_blank">WhatsApp</a>
+        <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank">Facebook</a>
+      </div>
+    </section>
   </main>
 
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
 
-
-  <!-- WhatsApp floating button -->
+  <!-- WhatsApp Floating Button -->
   <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
 
 </body>
