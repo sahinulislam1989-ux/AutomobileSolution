@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,9 @@
     <p>লাইট গাড়ির সম্পূর্ণ সার্ভিস — ব্রেক, অয়েল চেঞ্জ, রঙ, টিউনিং ইত্যাদি।</p>
     <a href="../index.html"><button>← ফিরে যান</button></a>
   </section>
+</body>
+</html>
+
 <style>
 <header>
 </body>
