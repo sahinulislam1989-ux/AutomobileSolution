@@ -1,292 +1,178 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Vehicle Services — Automobile Solution</title>
   <link rel="stylesheet" href="../style.css">
-<title>Automobile Solution</title>
 
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#001f3f">
-<style>
-    :root{
-      --brand:#001f3f;
-      --accent:#0073e6;
-      --fb:#1877f2;
-      --map:#e74c3c;
-      --pdf:#8e44ad;
-      --call:#28a745;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
-    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
-    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
-    header .title{font-size:22px; font-weight:700;}
-    .tag{color:#e6eefc; font-size:14px;}
-    .wrap{width:92%; max-width:1100px; margin:20px auto;}
-    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
-    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
-    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
-    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
-    .card p, .card li { color:#222; }
-    .services-list{padding-left:18px; margin:8px 0;}
-    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
-    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
-    .btn.map{background:var(--map);}
-    .btn.fb{background:var(--fb);}
-    .btn.call{background:var(--call);}
-    .btn.pdf{background:var(--pdf);}
-
-    /* SOS bar - কালো লেখা */
-    #sos{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
-      color:#000; /* লেখা কালো */
-      padding:10px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    #sos button{
-      border:0;
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:700;
-      cursor:pointer;
-      transition: background 0.2s;
-      color:#000; /* বাটনের লেখা কালো */
+  <style>
+    :root {
+      --brand: #001f3f;
+      --accent: #0073e6;
+      --fb: #1877f2;
+      --map: #e74c3c;
+      --pdf: #8e44ad;
+      --call: #28a745;
     }
 
-    section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
-    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
-
-    @media (max-width:420px){
-      header {padding:12px;}
-      .btn{font-size:13px; padding:7px 10px;}
-      header img{height:80px;}
-      .card h3 img{width:50px; height:50px;}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #222;
     }
-<style>
-<header>
-</body>
 
-<!-- Header -->
-  <header>
+    header {
+      background: var(--brand);
+      color: #fff;
+      padding: 16px;
+      text-align: center;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    header img {
+      height: 72px;
+      border-radius: 8px;
+      background: #fff;
+      padding: 6px;
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .wrap {
+      width: 92%;
+      max-width: 1100px;
+      margin: 20px auto;
+    }
+
+    h2.section-title {
+      text-align: center;
+      color: var(--brand);
+      margin: 22px 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--accent);
+    }
+
+    .card h3 img {
+      width: 44px;
+      height: 44px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .services-list {
+      padding-left: 18px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn.map { background: var(--map); }
+    .btn.fb { background: var(--fb); }
+    .btn.call { background: var(--call); }
+    .btn.pdf { background: var(--pdf); }
+
+    footer {
+      margin-top: 26px;
+      padding: 18px;
+      text-align: center;
+      color: #fff;
+      background: #222;
+      font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+      header img { height: 80px; }
+      .btn { font-size: 13px; padding: 7px 10px; }
+    }
+  </style>
+</head>
+
+<body>
 
   <!-- Header -->
   <header>
-    <img src="solution.jpeg" alt="Automobile Solution Logo">
+    <img src="../solution.jpeg" alt="Automobile Solution Logo">
     <div>
       <div class="title">🚗 Automobile Solution</div>
-      <div class="tag">Multiple workshops — Ready to serve</div>
+      <div class="tag">Light Vehicle Workshop List</div>
     </div>
- <style>
-  /* শুধু SOS তথ্যের জন্য */
-  .sos-info {
-    color: black;       /* লেখা কালো */
-    font-weight: 600;   /* গাঢ় করা */
-    font-size: 20px;    /* চাইলে আকার ঠিক করা */
-    margin-top: 10px;    /* হালকা ফাঁকা জায়গা */
-  }
- </style>
-</script>
-
-<!-- Extra CSS for button -->
-<style>
-#sos-wa {
-  background: #25D366; 
-  color: white; 
-  padding: 12px 20px; 
-  border-radius: 50px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  z-index: 9999;
-}
-</style>;
-</script>
+  </header>
 
   <main class="wrap">
 
-    <!-- Light Vehicle -->
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
     <div class="grid">
 
-      <!-- HRH Automobiles -->
+      <!-- উদাহরণ: HRH Automobiles -->
       <article class="card">
-        <h3><img src="hrh.jpg" alt="HRH Logo" width="200" height="200"> HRH Automobiles</h3>
-        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত/কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801970138816">01970-138816</a> , <a class="btn call" href="tel:+8801917360011">01917-360011</a></p>
+        <h3><img src="hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
+        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা-১২২৯</p>
+        <p><strong>ফোন:</strong> 
+          <a class="btn call" href="tel:+8801970138816">01970-138816</a>
+          <a class="btn call" href="tel:+8801917360011">01917-360011</a>
+        </p>
         <p><strong>সার্ভিস সমূহ:</strong></p>
         <ul class="services-list">
           <li>ইঞ্জিন মেরামত</li>
           <li>ব্রেক সিস্টেম সার্ভিস</li>
           <li>গিয়ার বক্স মেরামত</li>
           <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-          <li>ব্রেক বুস্টার রিপেয়ার</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
         </ul>
         <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank" rel="noopener">🌐 Facebook</a>
-          <!-- your available PDF -->
-          <a class="btn pdf" href="hrh.pdf" target="hrh.pdf" rel="noopener">📑Profile PDF</a>
+          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
+          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="hrh.pdf" target="_blank">📑 Profile PDF</a>
         </div>
       </article>
 
-       <!-- Auto Tecnic -->
-      <article class="card">
-        <h3><img src="auto.jpeg" alt="auto Logo" width="200" height="200"> Auto Tecnic</h3>
-        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা,ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801685093636">01685-093636</a> , <a class="btn call" href="tel:+8801712369797">01712-369797</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-          <li>ব্রেক বুস্টার রিপেয়ার</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/Autotechnic41?mibextid=ZbWKwL" target="_blank" rel="noopener">🌐 Facebook</a>
-          <!-- your available PDF -->
-          <a class="btn pdf" href="auto.pdf" target="auto.pdf" rel="noopener">📑Profile PDF</a>
-        </div>
-      </article>
+    </div>
 
-      <!-- PHP Automobile LTD -->
-      <article class="card">
-        <h3><img src="php.jpeg" alt="PHP Logo" width="200" height="200"> PHP Automobile LTD</h3>
-        <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-১২১২</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801708689294">01708-689294</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>কার ওয়াশ</li>
-          <li>ইঞ্জিন টিউনআপ</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>অয়েল ফিল্টার চেঞ্জ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank" rel="noopener">🌐 Facebook</a>
-          <!-- placeholder PDF (add php-profile.pdf later) -->
-          <a class="btn pdf" href="php-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
+    <div style="text-align:center; margin-top:30px;">
+      <a href="../index.html"><button style="padding:10px 20px; border:none; background:var(--accent); color:white; border-radius:6px; cursor:pointer;">← মূল পেইজে ফিরে যান</button></a>
+    </div>
 
-      <!-- Ms. Mayer Doa Rohiz -->
-      <article class="card">
-        <h3><img src="doa.jpeg" alt="Doa Logo" width="200" height="200"> Ms. Mayer Doa Rohiz</h3>
-        <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801767468755">01767-468755</a></p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন রিপেয়ার</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>সাসপেনশন চেক</li>
-          <li>কার ওয়াশ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank" rel="noopener">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank" rel="noopener">🌐 Facebook</a>
-          <a class="btn pdf" href="doa-profile.pdf" target="_blank" rel="noopener">📑 Profile PDF</a>
-        </div>
-      </article>
-
-    </div> <!-- .grid -->
-
-     <!-- Light Vehicle Other Workshop -->
-    <h2 class="section-title"> Light Vehicle Other Workshops</h2>
-    <div class="grid">
-
-      <!-- রুহুল আমিন মটরস -->
-      <article class="card">
-        <h3><img src=".jpeg" alt="Logo" width="200" height="200"> রুহুল আমিন মটরস</h3>
-        <p><strong>ঠিকানা:</strong> খিলগাঁও চৌধুরীপাড়া (র‍্যাব-৩ পিছনে) মালিবাগ ঢাকা </p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801962414851">01962-414851</a>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন  সিস্টেম</li>
-          <li>এসি সিস্টেম</li>
-          <li>ব্রেক সিস্টেম</li>
-          <li>অন্যান্য কাজ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https:/https://maps.app.goo.gl/y1hBRn4wPSCp7k1m6?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
-        </div>
-      </article>
-
-       <!-- পান্থ মটর ওয়ার্কশপ -->
-      <article class="card">
-        <h3><img src=".jpeg" alt="Logo" width="200" height="200"> পান্থ মটর ওয়ার্কশপ</h3>
-        <p><strong>ঠিকানা:</strong> ধানমন্ডি ২৭ নাম্বার (ভিশন 
-আই হসপিটাল এর পাশে),ধানমন্ডি, ঢাকা</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801712697967‬">01712-697967‬</a>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন  সিস্টেম</li>
-          <li>ব্রেক সিস্টেম</li>
-          <li>কার ফুল বডি ড্রেন পেন ওয়ার্ক</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/krzJj1qR7suXiZ7z5?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
-        </div>
-      </article>
-
-      <!-- শাহাদাত এসি এন্ড ইলেকট্রিক সার্ভিস সেন্টার  -->
-      <article class="card">
-        <h3><img src="  " alt="  " width="200" height="200"> শাহাদাত এসি এন্ড ইলেকট্রিক সার্ভিস সেন্টার </h3>
-        <p><strong>ঠিকানা:</strong>ধানমন্ডি ২৭ নাম্বার (ভিশন 
-আই হসপিটাল এর পাশে),ধানমন্ডি, ঢাকা</p>
-        <p><strong>ফোন:</strong> <a class="btn call" href="tel:+8801718479691">01718-479691</a>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>এসি সিস্টেম সার্ভিস</li>
-          <li>ইলেকট্রিক সিস্টেম</li>
-          <li>লাইট ভেহিকেল এসি এন্ড ইলেকট্রিক সকল কাজ</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/krzJj1qR7suXiZ7z5?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
-        </div>
-      </article> 
-</head>
-<body>
-  <section class="profile">
-    <h1>🚗 Light Vehicle Service</h1>
-    <p>লাইট গাড়ির সম্পূর্ণ সার্ভিস — ব্রেক, অয়েল চেঞ্জ, রঙ, টিউনিং ইত্যাদি।</p>
-    <a href="../index.html"><button>← ফিরে যান</button></a>
-  </section>
-</body>
-</html>
-
-<style>
-<header>
-</body>
-
-<!-- Header -->
-  <header>
-
-<head>
- 
-  
   </main>
 
   <footer>
