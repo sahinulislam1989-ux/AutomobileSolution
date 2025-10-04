@@ -2,28 +2,8 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>Light Service</title>
   <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-  <section class="profile">
-    <h1>🚗 Light Vehicle Service</h1>
-    <p>লাইট গাড়ির সম্পূর্ণ সার্ভিস — ব্রেক, অয়েল চেঞ্জ, রঙ, টিউনিং ইত্যাদি।</p>
-    <a href="../index.html"><button>← ফিরে যান</button></a>
-  </section>
-</body>
-</html>
-
-<style>
-<header>
-</body>
-
-<!-- Header -->
-  <header>
-
-<head>
- 
-  <title>Automobile Solution</title>
+<title>Automobile Solution</title>
 
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
@@ -287,6 +267,26 @@
           <a class="btn map" href="https://maps.app.goo.gl/krzJj1qR7suXiZ7z5?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
         </div>
       </article> 
+</head>
+<body>
+  <section class="profile">
+    <h1>🚗 Light Vehicle Service</h1>
+    <p>লাইট গাড়ির সম্পূর্ণ সার্ভিস — ব্রেক, অয়েল চেঞ্জ, রঙ, টিউনিং ইত্যাদি।</p>
+    <a href="../index.html"><button>← ফিরে যান</button></a>
+  </section>
+</body>
+</html>
+
+<style>
+<header>
+</body>
+
+<!-- Header -->
+  <header>
+
+<head>
+ 
+  
   </main>
 
   <footer>
