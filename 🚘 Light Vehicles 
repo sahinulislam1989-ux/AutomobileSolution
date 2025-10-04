@@ -3,66 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light Vehicle Services — Automobile Solution</title>
-  <link rel="stylesheet" href="../style.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f4f4;
-      color: #222;
-    }
-    header {
-      background: #001f3f;
-      color: #fff;
-      padding: 16px;
-      text-align: center;
-    }
-    h1 { color: #001f3f; text-align: center; margin-top: 30px; }
-    section {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 800px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-    ul { padding-left: 20px; }
-    .back-btn {
-      display: block;
-      text-align: center;
-      margin: 30px auto;
-      padding: 10px 20px;
-      background: #0073e6;
-      color: #fff;
-      border-radius: 6px;
-      width: 180px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <title>Automobile Solution</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001f3f">
 </head>
 
 <body>
-
+  <!-- Header -->
   <header>
-    <h2>🚗 Automobile Solution</h2>
+    <img src="images/solution.jpeg" alt="Automobile Solution Logo">
+    <div>
+      <div class="title">🚗 Automobile Solution</div>
+      <div class="tag">Multiple workshops — Ready to serve</div>
+    </div>
   </header>
 
-  <section>
-    <h1>🚙 Light Vehicle Services</h1>
-    <p>এখানে আপনার লাইট ভেহিকেল সার্ভিস তথ্য দেখানো হবে।</p>
-
-    <ul>
-      <li>ইঞ্জিন মেরামত</li>
-      <li>ব্রেক সার্ভিস</li>
-      <li>গিয়ার বক্স রক্ষণাবেক্ষণ</li>
-      <li>এয়ার কন্ডিশন সার্ভিস</li>
-    </ul>
+  <!-- SOS Section -->
+  <section id="sos">
+    <span class="sos-info">📞 জরুরি সহায়তা: 01970-138816</span>
   </section>
 
-  <a href="../index.html" class="back-btn">← মূল পেইজে ফিরে যান</a>
+  <!-- Main Content -->
+  <main class="wrap">
 
+    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
+
+    <div class="grid">
+      <!-- HRH Automobiles -->
+      <article class="card">
+        <h3><img src="images/hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
+        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা-১২২৯</p>
+        <p><strong>ফোন:</strong> 
+          <a class="btn call" href="tel:+8801970138816">01970-138816</a>,
+          <a class="btn call" href="tel:+8801917360011">01917-360011</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সিস্টেম সার্ভিস</li>
+          <li>গিয়ার বক্স মেরামত</li>
+          <li>এয়ার কন্ডিশন রিপেয়ার</li>
+          <li>কার ওয়াশ</li>
+          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
+          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="hrh.pdf" target="_blank">📑 Profile PDF</a>
+        </div>
+      </article>
+
+      <!-- Auto Tecnic -->
+      <article class="card">
+        <h3><img src="images/auto.jpeg" alt="Auto Tecnic"> Auto Tecnic</h3>
+        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
+        <p><strong>ফোন:</strong> 
+          <a class="btn call" href="tel:+8801685093636">01685-093636</a>,
+          <a class="btn call" href="tel:+8801712369797">01712-369797</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সিস্টেম সার্ভিস</li>
+          <li>এয়ার কন্ডিশন রিপেয়ার</li>
+          <li>কার ওয়াশ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank">📍 Google Map</a>
+          <a class="btn fb" href="https://www.facebook.com/Autotechnic41" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="auto.pdf" target="_blank">📑 Profile PDF</a>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Automobile Solution — All Rights Reserved
+  </footer>
 </body>
 </html>
