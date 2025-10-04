@@ -5,179 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Light Vehicle Services — Automobile Solution</title>
   <link rel="stylesheet" href="../style.css">
-
   <style>
-    :root {
-      --brand: #001f3f;
-      --accent: #0073e6;
-      --fb: #1877f2;
-      --map: #e74c3c;
-      --pdf: #8e44ad;
-      --call: #28a745;
-    }
-
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background: #f4f4f4;
       color: #222;
     }
-
     header {
-      background: var(--brand);
+      background: #001f3f;
       color: #fff;
       padding: 16px;
       text-align: center;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
     }
-
-    header img {
-      height: 72px;
-      border-radius: 8px;
+    h1 { color: #001f3f; text-align: center; margin-top: 30px; }
+    section {
       background: #fff;
-      padding: 6px;
-    }
-
-    .title {
-      font-size: 22px;
-      font-weight: 700;
-    }
-
-    .wrap {
-      width: 92%;
-      max-width: 1100px;
+      padding: 20px;
       margin: 20px auto;
-    }
-
-    h2.section-title {
-      text-align: center;
-      color: var(--brand);
-      margin: 22px 0;
-    }
-
-    .grid {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .card {
-      background: #fff;
-      padding: 16px;
       border-radius: 10px;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
-
-    .card h3 {
-      margin: 0 0 8px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      color: var(--accent);
-    }
-
-    .card h3 img {
-      width: 44px;
-      height: 44px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .services-list {
-      padding-left: 18px;
-    }
-
-    .buttons {
-      margin-top: 10px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 8px 12px;
-      border-radius: 6px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
-
-    .btn.map { background: var(--map); }
-    .btn.fb { background: var(--fb); }
-    .btn.call { background: var(--call); }
-    .btn.pdf { background: var(--pdf); }
-
-    footer {
-      margin-top: 26px;
-      padding: 18px;
+    ul { padding-left: 20px; }
+    .back-btn {
+      display: block;
       text-align: center;
+      margin: 30px auto;
+      padding: 10px 20px;
+      background: #0073e6;
       color: #fff;
-      background: #222;
-      font-size: 14px;
-    }
-
-    @media (max-width: 420px) {
-      header img { height: 80px; }
-      .btn { font-size: 13px; padding: 7px 10px; }
+      border-radius: 6px;
+      width: 180px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
   <header>
-    <img src="../solution.jpeg" alt="Automobile Solution Logo">
-    <div>
-      <div class="title">🚗 Automobile Solution</div>
-      <div class="tag">Light Vehicle Workshop List</div>
-    </div>
+    <h2>🚗 Automobile Solution</h2>
   </header>
 
-  <main class="wrap">
+  <section>
+    <h1>🚙 Light Vehicle Services</h1>
+    <p>এখানে আপনার লাইট ভেহিকেল সার্ভিস তথ্য দেখানো হবে।</p>
 
-    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
-    <div class="grid">
+    <ul>
+      <li>ইঞ্জিন মেরামত</li>
+      <li>ব্রেক সার্ভিস</li>
+      <li>গিয়ার বক্স রক্ষণাবেক্ষণ</li>
+      <li>এয়ার কন্ডিশন সার্ভিস</li>
+    </ul>
+  </section>
 
-      <!-- উদাহরণ: HRH Automobiles -->
-      <article class="card">
-        <h3><img src="hrh.jpg" alt="HRH Logo"> HRH Automobiles</h3>
-        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> 
-          <a class="btn call" href="tel:+8801970138816">01970-138816</a>
-          <a class="btn call" href="tel:+8801917360011">01917-360011</a>
-        </p>
-        <p><strong>সার্ভিস সমূহ:</strong></p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="hrh.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
-
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-      <a href="../index.html"><button style="padding:10px 20px; border:none; background:var(--accent); color:white; border-radius:6px; cursor:pointer;">← মূল পেইজে ফিরে যান</button></a>
-    </div>
-
-  </main>
-
-  <footer>
-    © 2025 Automobile Solution — All Rights Reserved
-  </footer>
+  <a href="../index.html" class="back-btn">← মূল পেইজে ফিরে যান</a>
 
 </body>
 </html>
