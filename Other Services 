@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Other Services — Automobile Solution</title>
-  <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8; color:#222;}
-    header {background:#001f3f; color:#fff; padding:16px; text-align:center;}
-    header img{height:60px; border-radius:8px; background:#fff; padding:6px;}
-    h1,h2{color:#001f3f; text-align:center;}
-    section{max-width:900px; margin:20px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
-    ul{padding-left:20px;}
-    a.btn{display:inline-block; margin:10px 5px; padding:8px 14px; background:#001f3f; color:#fff; text-decoration:none; border-radius:6px;}
-    a.btn:hover{background:#004080;}
-    footer{background:#001f3f; color:#fff; text-align:center; padding:20px; margin-top:20px;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Services</title>
+<link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
-  <img src="../images/solution.jpeg" alt="Automobile Solution Logo">
   <h1>Other Services</h1>
 </header>
 
-<section>
-  <h2>অন্যান্য সেবা</h2>
-  <ul>
-    <li>AC সার্ভিস ও ফ্রিজিং</li>
-    <li>বড় টায়ার চেক ও রিপ্লেস</li>
-    <li>ব্যাটারি ও বৈদ্যুতিক কাজ</li>
-    <li>স্পেয়ার পার্টস সাপোর্ট</li>
-    <li>অ্যাডিশনাল সার্ভিস</li>
-  </ul>
-  <div style="text-align:center;">
-    <a href="../index.html" class="btn">🏠 Back to Home</a>
-    <a href="light.html" class="btn">Light Services</a>
-    <a href="heavy.html" class="btn">Heavy Services</a>
-  </div>
-</section>
+<main class="wrap">
+  <p>অন্যান্য সেবা সম্পর্কিত তথ্য।</p>
+  <p>নমুনা: ব্যাটারি সার্ভিস, টায়ার পরিবর্তন, যন্ত্রাংশ বিক্রয় ইত্যাদি</p>
+  <button onclick="window.location.href='../index.html'">Back to Home</button>
+</main>
 
-<footer>
-  © 2025 Automobile Solution — All Rights Reserved
-</footer>
-
+<footer>© 2025 Automobile Solution</footer>
 </body>
 </html>
