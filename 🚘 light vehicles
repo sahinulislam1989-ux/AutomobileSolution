@@ -12,7 +12,7 @@
   <!-- ===== Header ===== -->
   <header>
     <h1>🚗 light service</h1>
-    <button onclick="window.location.href='../index.html'">🏠 Back to Home</button>
+    <button onclick="window.location.href='service-box.html'">🏠 Back to Home</button>
   </header>
 
   <!-- ===== Main Section ===== -->
