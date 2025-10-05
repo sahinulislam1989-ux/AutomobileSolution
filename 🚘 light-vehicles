@@ -3,56 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Light Vehicle Service</title>
+  <title>Light Vehicle Service — Automobile Solution</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      margin-bottom: 30px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    .card h3 {
+      color: #001f3f;
+      margin-top: 10px;
+    }
+    .card p {
+      color: #444;
+      margin: 5px 0;
+    }
+    .btn {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .btn.call { background: #0073e6; }
+    .btn.map { background: #2ecc71; }
+    .btn.fb { background: #1877f2; }
+    .btn.pdf { background: #ff9800; }
+    .btn:hover { opacity: 0.9; }
+    header button {
+      margin-left: 15px;
+      background: #0073e6;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    header button:hover {
+      background: #005bb5;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <h1>🚗 Light Service</h1>
-  <button onclick="window.location.href='light vehicles/light service.html'">বিস্তারিত</button>🏠 Back to Home</button>
-</header>
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>🚗 Light Vehicle Service</h1>
+    <button onclick="window.location.href='../index.html'">🏠 হোমে ফিরুন</button>
+  </header>
 
-<main class="wrap">
-  <h2 class="section-title">🚙 Light Service Workshops</h2>
+  <!-- ===== Main Section ===== -->
+  <main class="wrap">
 
-  <div class="service-container">
+    <!-- === Section 1 === -->
+    <h2 class="section-title">🚙 প্রিমিয়াম Light Service ওয়ার্কশপ</h2>
 
-    <div class="service-box">
-      <h3>HRH Automobiles</h3>
-      <img src="hrh.jpg" alt="HRH">
-      <p>কুড়িল ফ্লাইওভার সংলগ্ন, ঢাকা</p>
-      <a class="btn" href="tel:+8801970138816">কল করুন</a>
-      <a class="btn" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 ম্যাপ</a>
+    <div class="grid">
+
+      <!-- HRH Automobiles -->
+      <article class="card">
+        <img src="../images/hrh.jpeg" alt="HRH Logo">
+        <h3>HRH Automobiles</h3>
+        <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা</p>
+        <p><strong>ফোন:</strong> 
+          <a class="btn call" href="tel:+8801970138816">01970-138816</a>
+          <a class="btn call" href="tel:+8801917360011">01917-360011</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সার্ভিস</li>
+          <li>গিয়ার বক্স</li>
+          <li>এসি রিপেয়ার</li>
+          <li>কার ওয়াশ</li>
+          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 মানচিত্র</a>
+          <a class="btn fb" href="https://facebook.com/hrhautomobiles" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="../pdf/hrh.pdf" target="_blank">📑 প্রোফাইল</a>
+        </div>
+      </article>
+
+      <!-- Auto Technic -->
+      <article class="card">
+        <img src="../images/auto.jpeg" alt="Auto Technic">
+        <h3>Auto Technic</h3>
+        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা</p>
+        <p><strong>ফোন:</strong>
+          <a class="btn call" href="tel:+8801685093636">01685-093636</a>
+          <a class="btn call" href="tel:+8801712369797">01712-369797</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন সার্ভিস</li>
+          <li>ব্রেক সার্ভিস</li>
+          <li>গিয়ার বক্স</li>
+          <li>এয়ার কন্ডিশন রিপেয়ার</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77?g_st=aw" target="_blank">📍 মানচিত্র</a>
+          <a class="btn fb" href="https://www.facebook.com/Autotechnic41?mibextid=ZbWKwL" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="../pdf/auto.pdf" target="_blank">📑 প্রোফাইল</a>
+        </div>
+      </article>
+
+      <!-- PHP Automobile -->
+      <article class="card">
+        <img src="../images/php.jpeg" alt="PHP Logo">
+        <h3>PHP Automobile LTD</h3>
+        <p><strong>ঠিকানা:</strong> তেজগাঁও ইন্ডাস্ট্রিয়াল এরিয়া, ঢাকা-১২১২</p>
+        <p><strong>ফোন:</strong>
+          <a class="btn call" href="tel:+8801708689294">01708-689294</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন মেরামত</li>
+          <li>ব্রেক সার্ভিস</li>
+          <li>টিউনআপ ও কার ওয়াশ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank">📍 মানচিত্র</a>
+          <a class="btn fb" href="https://www.facebook.com/share/16ZZf1u7Bs/" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="../pdf/php-profile.pdf" target="_blank">📑 প্রোফাইল</a>
+        </div>
+      </article>
+
+      <!-- Mayer Doa Rohiz -->
+      <article class="card">
+        <img src="../images/doa.jpeg" alt="Doa Logo">
+        <h3>Ms. Mayer Doa Rohiz</h3>
+        <p><strong>ঠিকানা:</strong> বউবাজার, বেরুলিয়া, সাভার, ঢাকা</p>
+        <p><strong>ফোন:</strong>
+          <a class="btn call" href="tel:+8801767468755">01767-468755</a>
+        </p>
+        <ul class="services-list">
+          <li>ইঞ্জিন রিপেয়ার</li>
+          <li>ব্রেক সার্ভিস</li>
+          <li>সাসপেনশন চেক</li>
+          <li>কার ওয়াশ</li>
+        </ul>
+        <div class="buttons">
+          <a class="btn map" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank">📍 মানচিত্র</a>
+          <a class="btn fb" href="https://www.facebook.com/share/14KbwBXomrG/" target="_blank">🌐 Facebook</a>
+          <a class="btn pdf" href="../pdf/doa-profile.pdf" target="_blank">📑 প্রোফাইল</a>
+        </div>
+      </article>
+
     </div>
+  </main>
 
-    <div class="service-box">
-      <h3>Auto Technic</h3>
-      <img src="auto.jpeg" alt="Auto Technic">
-      <p>ভাটারা, কুড়িল বিশ্বরোড</p>
-      <a class="btn" href="tel:+8801685093636">কল করুন</a>
-      <a class="btn" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank">📍 ম্যাপ</a>
-    </div>
+  <footer>
+    © 2025 Automobile Solution — All Rights Reserved
+  </footer>
 
-    <div class="service-box">
-      <h3>PHP Automobile LTD</h3>
-      <img src="php.jpeg" alt="PHP">
-      <p>তেজগাঁও, ঢাকা</p>
-      <a class="btn" href="tel:+8801708689294">কল করুন</a>
-      <a class="btn" href="https://maps.app.goo.gl/8fTfMzhGX83qeRQPA" target="_blank">📍 ম্যাপ</a>
-    </div>
-
-    <div class="service-box">
-      <h3>Ms. Mayer Doa Rohiz</h3>
-      <img src="doa.jpeg" alt="Doa Rohiz">
-      <p>বেরুলিয়া, সাভার</p>
-      <a class="btn" href="tel:+8801767468755">কল করুন</a>
-      <a class="btn" href="https://maps.app.goo.gl/wsMgjSnUYAGigx8i9" target="_blank">📍 ম্যাপ</a>
-    </div>
-
-  </div>
-</main>
-
-<footer>© 2025 Automobile Solution</footer>
 </body>
 </html>
