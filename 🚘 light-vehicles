@@ -10,7 +10,7 @@
 
 <header>
   <h1>🚗 Light Service</h1>
-  <button onclick="window.location.href='../index.html'">🏠 Back to Home</button>
+  <button onclick="window.location.href='light vehicles/light service.html'">বিস্তারিত</button>🏠 Back to Home</button>
 </header>
 
 <main class="wrap">
