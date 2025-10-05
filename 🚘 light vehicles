@@ -11,15 +11,15 @@
 
   <!-- ===== Header ===== -->
   <header>
-    <h1>🚗 Light Vehicle Service</h1>
+    <h1>🚗 light service</h1>
     <button onclick="window.location.href='../index.html'">🏠 Back to Home</button>
   </header>
 
   <!-- ===== Main Section ===== -->
   <main class="wrap">
 
-    <!-- === Section 1: Light Vehicle Workshops === -->
-    <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
+    <!-- === Section 1: light services === -->
+    <h2 class="section-title">🚙 light services</h2>
 
     <div class="grid">
 
@@ -121,8 +121,8 @@
 
     </div> <!-- .grid -->
 
-    <!-- === Section 2: Light Vehicle Other Workshops === -->
-    <h2 class="section-title">🛠️ Light Vehicle Other Workshops</h2>
+    <!-- === Section 2: light service other workshops === -->
+    <h2 class="section-title">🛠️ light service</h2>
     <div class="grid">
 
       <!-- রুহুল আমিন মটরস -->
