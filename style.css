@@ -166,30 +166,38 @@ header img {
     .service-box img {
         height: 150px;
     }
+/* ========================
+   Header Styles
+======================== */
 header {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #001f3f;
   color: white;
-  padding: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 header img {
-  width: 80px;
+  width: 100px; /* লোগো বড় করা হয়েছে */
   height: auto;
-  margin-right: 15px;
-  border-radius: 10px;
+  margin-right: 20px;
+  border-radius: 12px;
+  border: 2px solid #ffcc00;
 }
 
 header .title {
-  font-size: 36px; /* এখানে আপনি আকার বাড়াতে বা কমাতে পারেন */
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-size: 48px; /* টাইটেল বড় */
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
 
 header .tag {
-  font-size: 18px;
+  font-size: 20px;
   color: #ffcc00;
-  font-weight: 500;
+  font-weight: 600;
+  margin-top: 5px;
+};
 }
