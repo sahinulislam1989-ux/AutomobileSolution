@@ -45,7 +45,31 @@
     .btn.fb{background:var(--fb);}
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
+
+    /* SOS bar - কালো লেখা */
+    #sos{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
+      color:#000; /* লেখা কালো */
+      padding:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
     }
+    #sos button{
+      border:0;
+      padding:8px 14px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      transition: background 0.2s;
+      color:#000; /* বাটনের লেখা কালো */
+    }
+
     section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
     footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
 
@@ -58,7 +82,9 @@
   </style>
 </head>
 <body>
+
   <!-- Header -->
+  <header>
     <img src="solution.jpeg" alt="Automobile Solution Logo">
     <div>
       <div class="title">🚗 Automobile Solution</div>
@@ -70,9 +96,8 @@
       <div>
      <!-- বিশেষ লেখার জন্য আলাদা ক্লাস -->
 <div class="sos-info">জরুরী প্রয়োজনে ডান পাসের মোবাইল চিহ্ন দেওয়া আইকনে  whatsapp মেসেঞ্জারে মাধ্যমে যোগাযোগ করুন।</div>
-
+        
 <main class="wrap">
-
   <!-- Profile Section -->
   <section class="profile">
     <img src="profile.jpeg" alt="আমার প্রোফাইল">
