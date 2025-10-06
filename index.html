@@ -25,6 +25,12 @@
       --pdf:#8e44ad;
       --call:#28a745;
     }
+    header img {
+  height: 120px;  /* লোগো বড় করা হলো */
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+    }
     *{box-sizing:border-box}
     body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
     header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
@@ -63,13 +69,6 @@
 <body>
 
   <!-- Header -->
-  <header>
-    header img {
-  height: 120px;  /* লোগো বড় করা হলো */
-  border-radius: 8px;
-  background: #fff;
-  padding: 6px;
-}
     <img src="solution.jpeg" alt="Automobile Solution Logo">
     <div>
       <div class="title">🚗 Automobile Solution</div>
@@ -86,7 +85,8 @@
 
   <!-- Profile Section -->
   <section class="profile">
-    <img src="images/profile.jpeg" alt="আমার প্রোফাইল">
+    <img src="profile.jpeg" alt="আমার প্রোফাইল">
+    <div>
     <h2>Md Sahihen</h2>
     <p>Founder & CEO — Automobile Solution</p>
   </section>   
@@ -96,14 +96,15 @@
     <div class="service-container">
       <div class="service-box">
         <h2>Light Service</h2>
+        
         <p>লাইট গাড়ির সার্ভিসিং ও মেরামত।</p>
-        <img src="images/light.jpeg" alt="Light Service">
+        <img src="light.jpeg" alt="Light Service">
         <button onclick="window.location.href='services/light.html'">বিস্তারিত</button>
       </div>
       <div class="service-box">
         <h2>Heavy Service</h2>
         <p>বাস, ট্রাক ও ভারী যানবাহনের সার্ভিসিং।</p>
-        <img src="images/heavy.jpeg" alt="Heavy Service">  
+        <img src="heavy.jpeg" alt="Heavy Service">  
         <button onclick="window.location.href='services/heavy.html'">বিস্তারিত</button>
       </div>
       <div class="service-box">
