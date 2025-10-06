@@ -46,28 +46,7 @@
     .btn.call{background:var(--call);}
     .btn.pdf{background:var(--pdf);}
 
-    /* SOS bar - কালো লেখা */
-    #sos{
-      position:sticky;
-      top:0;
-      z-index:9999;
-      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
-      color:#000; /* লেখা কালো */
-      padding:10px;
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    #sos button{
-      border:0;
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:700;
-      cursor:pointer;
-      transition: background 0.2s;
-      color:#000; /* বাটনের লেখা কালো */
+   
     }
 
     section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
@@ -85,6 +64,12 @@
 
   <!-- Header -->
   <header>
+    header img {
+  height: 120px;  /* লোগো বড় করা হলো */
+  border-radius: 8px;
+  background: #fff;
+  padding: 6px;
+}
     <img src="solution.jpeg" alt="Automobile Solution Logo">
     <div>
       <div class="title">🚗 Automobile Solution</div>
