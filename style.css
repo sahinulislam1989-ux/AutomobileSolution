@@ -128,7 +128,7 @@ footer {
 
 /* হেডারের লোগো */
 header img {
-    height: 60px;        /* লোগোর উচ্চতা */
+    height: 40px;        /* লোগোর উচ্চতা */
     width: auto;         /* প্রপোরশনাল রাখবে */
     object-fit: contain; /* ছবি ক্রপ না হয় */
     border-radius: 8px;  
@@ -148,8 +148,8 @@ header img {
 
 /* সার্ভিস বক্সের ছবি */
 .service-box img {
-    width: 100%;           /* সার্ভিস বক্সের সাথে ফিট হবে */
-    height: 180px;
+    width: 80%;           /* সার্ভিস বক্সের সাথে ফিট হবে */
+    height: 120px;
     object-fit: cover;     /* প্রপোরশনাল রাখবে এবং ক্রপ হতে পারে */
     border-radius: 10px;
 }
