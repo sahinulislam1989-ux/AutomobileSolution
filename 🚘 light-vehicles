@@ -1,15 +1,42 @@
-git clone https://github.com/sahinulislam1989-ux/AutomobileSolution.git
-cd AutomobileSolution
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light Vehicle Service — Automobile Solution</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
-# 1) তৈরি করে নাও clean services folder
-mkdir -p services
-# move বা rename ফাইলগুলো (উদাহরণ)
-git mv "%F0%9F%9A%98 light-vehicles" services/light-vehicles || true
-git mv "heavy vehicles" services/heavy-vehicles || true
-git mv "other services" services/other-services || true
+<header>
+  <img src="../images/light_service.jpeg" alt="Light Vehicle Service">
+  <div>
+    <div class="title">🚗 Light Vehicle Service</div>
+    <div class="tag">লাইট গাড়ির সার্ভিসিং ও মেরামত কেন্দ্র</div>
+  </div>
+</header>
 
-# অথবা সরাসরি service html ফাইলগুলো services/ তে রাখো:
-git mv "🚘 light-vehicles/light.html" services/light_service.html
+<main class="wrap">
+  <section class="profile">
+    <img src="../images/profile.jpeg" alt="Owner Profile">
+    <h2>Md Sahihen</h2>
+    <p>Light Service Specialist — Automobile Solution</p>
+    <p>📍 অবস্থান: রোড নং ১২, মিরপুর, ঢাকা</p>
+    <p>📞 ফোন: <a href="tel:01962419405">01962419405</a></p>
+  </section>
 
-git commit -m "Normalize folders: move service pages into services/ and remove spaces"
-git push
+  <section class="links">
+    <a href="https://wa.me/8801962419405?text=হ্যালো! আমি Light Service বিষয়ে জানতে চাই" target="_blank">WhatsApp</a>
+    <a href="https://www.google.com/maps?q=Mirpur,+Dhaka" target="_blank">Google Map</a>
+    <a href="../index.html" class="btn">🏠 হোমে ফিরে যান</a>
+  </section>
+</main>
+
+<footer>
+© 2025 Automobile Solution — All Rights Reserved
+</footer>
+
+<a id="whatsapp-button" href="https://wa.me/8801962419405?text=Light Service বিষয়ে সাহায্য দরকার" target="_blank">📱</a>
+
+</body>
+</html>
