@@ -166,4 +166,11 @@ header img {
     .service-box img {
         height: 150px;
     }
+<header>
+  <img src="solution.jpeg" alt="Automobile Solution Logo">
+  <div>
+    <div class="title">🚗 Automobile Solution</div>
+    <div class="tag">Multiple workshops — Ready to serve</div>
+  </div>
+</header>
 }
