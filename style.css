@@ -166,11 +166,30 @@ header img {
     .service-box img {
         height: 150px;
     }
-<header>
-  <img src="solution.jpeg" alt="Automobile Solution Logo">
-  <div>
-    <div class="title">🚗 Automobile Solution</div>
-    <div class="tag">Multiple workshops — Ready to serve</div>
-  </div>
-</header>
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #001f3f;
+  color: white;
+  padding: 20px;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+header .title {
+  font-size: 36px; /* এখানে আপনি আকার বাড়াতে বা কমাতে পারেন */
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+header .tag {
+  font-size: 18px;
+  color: #ffcc00;
+  font-weight: 500;
 }
