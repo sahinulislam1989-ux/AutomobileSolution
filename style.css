@@ -122,32 +122,48 @@ footer {
   header img{height:60px;}
   .profile img{width:100px;}
 }
-/* শুধু ছবি সাইজ ঠিক করার জন্য */
+/* =========================
+   ছবির সাইজ ঠিক করার CSS
+   ========================= */
 
-/* লোগো হেডারে */
+/* হেডারের লোগো */
 header img {
-    height: 60px;       /* লোগোর সাইজ */
-    width: auto;        /* প্রপোরশনাল রাখবে */
-    border-radius: 8px;
+    height: 60px;        /* লোগোর উচ্চতা */
+    width: auto;         /* প্রপোরশনাল রাখবে */
+    object-fit: contain; /* ছবি ক্রপ না হয় */
+    border-radius: 8px;  
     background: #fff;
     padding: 6px;
-    object-fit: contain;
 }
 
 /* প্রোফাইল ছবি */
 .profile img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 50%;    /* গোল করা */
+    object-fit: cover;     /* প্রপোরশনাল রাখবে */
     display: block;
     margin: 0 auto 12px;
 }
 
 /* সার্ভিস বক্সের ছবি */
 .service-box img {
-    width: 100%;        /* সার্ভিস বক্সের সাথে ফিট হবে */
+    width: 100%;           /* সার্ভিস বক্সের সাথে ফিট হবে */
     height: 180px;
-    object-fit: cover;
+    object-fit: cover;     /* প্রপোরশনাল রাখবে এবং ক্রপ হতে পারে */
     border-radius: 10px;
+}
+
+/* মোবাইল responsive হেডার লোগো ও সার্ভিস ছবি */
+@media (max-width: 420px) {
+    header img {
+        height: 50px;
+    }
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+    .service-box img {
+        height: 150px;
+    }
 }
