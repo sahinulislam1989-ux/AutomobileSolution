@@ -3,40 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Light Vehicle Service — Automobile Solution</title>
+<title>Light Service</title>
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
-  <img src="../images/light_service.jpeg" alt="Light Vehicle Service">
-  <div>
-    <div class="title">🚗 Light Vehicle Service</div>
-    <div class="tag">লাইট গাড়ির সার্ভিসিং ও মেরামত কেন্দ্র</div>
-  </div>
+  <h1>Light Service</h1>
 </header>
 
 <main class="wrap">
-  <section class="profile">
-    <img src="../images/profile.jpeg" alt="Owner Profile">
-    <h2>Md Sahihen</h2>
-    <p>Light Service Specialist — Automobile Solution</p>
-    <p>📍 অবস্থান: রোড নং ১২, মিরপুর, ঢাকা</p>
-    <p>📞 ফোন: <a href="tel:01962419405">01962419405</a></p>
-  </section>
-
-  <section class="links">
-    <a href="https://wa.me/8801962419405?text=হ্যালো! আমি Light Service বিষয়ে জানতে চাই" target="_blank">WhatsApp</a>
-    <a href="https://www.google.com/maps?q=Mirpur,+Dhaka" target="_blank">Google Map</a>
-    <a href="../index.html" class="btn">🏠 হোমে ফিরে যান</a>
-  </section>
+  <p>লাইট গাড়ির সার্ভিসিং ও মেরামতের বিস্তারিত তথ্য এখানে থাকবে।</p>
+  <p>যেমনঃ Toyota Corolla, Honda City, Suzuki Swift ইত্যাদি।</p>
+  <button onclick="window.location.href='../index.html'">Back to Home</button>
 </main>
 
-<footer>
-© 2025 Automobile Solution — All Rights Reserved
-</footer>
-
-<a id="whatsapp-button" href="https://wa.me/8801962419405?text=Light Service বিষয়ে সাহায্য দরকার" target="_blank">📱</a>
-
+<footer>© 2025 Automobile Solution</footer>
 </body>
 </html>
