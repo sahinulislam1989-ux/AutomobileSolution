@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Automobile Solution</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automobile Solution</title>
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001f3f">
+<style>
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+      --fb:#1877f2;
+      --map:#e74c3c;
+      --pdf:#8e44ad;
+      --call:#28a745;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    header .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+    .wrap{width:92%; max-width:1100px; margin:20px auto;}
+    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
+    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
+    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
+    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
+    .card p, .card li { color:#222; }
+    .services-list{padding-left:18px; margin:8px 0;}
+    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
+    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
+    .btn.map{background:var(--map);}
+    .btn.fb{background:var(--fb);}
+    .btn.call{background:var(--call);}
+    .btn.pdf{background:var(--pdf);}
+
+    /* SOS bar - কালো লেখা */
+    #sos{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:#fff; /* হালকা ব্যাকগ্রাউন্ড */
+      color:#000; /* লেখা কালো */
+      padding:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    #sos button{
+      border:0;
+      padding:8px 14px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      transition: background 0.2s;
+      color:#000; /* বাটনের লেখা কালো */
+    }
+
+    section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
+    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
+
+    @media (max-width:420px){
+      header {padding:12px;}
+      .btn{font-size:13px; padding:7px 10px;}
+      header img{height:80px;}
+      .card h3 img{width:50px; height:50px;}
+    }
+  </style>
 </head>
 <body>
-<!-- Header -->
+
+  <!-- Header -->
   <header>
     <img src="solution.jpeg" alt="Automobile Solution Logo">
     <div>
@@ -30,6 +98,37 @@
     <p>Founder & CEO — Automobile Solution</p>
   </section>
 
+   <!-- MVP Plan -->
+    <section>
+      <h2>📌 MVP রিলিজ প্লান</h2>
+      <ul>
+        <li>SOS ও WhatsApp সংযোগ চালু</li>
+        <li>GPS লোকেশন শেয়ারিং</li>
+        <li>সরাসরি লাইভ চ্যাট সাপোর্ট</li>
+        <li>সার্ভিস সেন্টার লিস্ট ও ম্যাপ লোকেশন</li>
+        <li>প্রাথমিক কাস্টমার অ্যাপ (পরে যুক্ত হবে)</li>
+      </ul>
+    </section>
+    <!-- Security & Operations -->
+    <section>
+      <h2>🔒 নিরাপত্তা ও অপারেশন</h2>
+      <p>✔ সব কাস্টমার তথ্য নিরাপদ থাকবে।</p>
+      <p>✔ লোকেশন শেয়ার কেবলমাত্র জরুরি সেবার জন্য ব্যবহৃত হবে।</p>
+      <p>✔ SOS বাটন ক্লিক করলে নিকটস্থ সার্ভিস সেন্টার সঙ্গে সঙ্গে জানবে।</p>
+      <p>✔ ২৪/৭ টিম প্রস্তুত থাকবে সাহায্যের জন্য।</p>
+    </section>
+
+    <!-- Contact / Links -->
+    <section>
+      <!-- Links Section -->
+<section>
+  <h2>🌍 আমাদের সাথে যুক্ত থাকুন</h2>
+  <div class="links">
+    <a href=" https://whatsapp.com/dl/" target="_blank" class="btn-map"> whatsapp.com</a>
+    <a href="https://www.facebook.com/share/1ELQAgaqwF/" target="_blank" class="btn-fb">📘 Facebook</a>
+  </div>
+  <section>
+    
   <!-- Services Section -->
   <section class="service-portal">
     <h2 class="section-title">🚘 আমাদের সার্ভিস সমূহ</h2>
@@ -64,8 +163,8 @@
   © 2025 Automobile Solution — All Rights Reserved
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank">📱</a>
+<!-- WhatsApp floating button -->
+  <a id="whatsapp-button" href="https://wa.me/8801962419405?text=হ্যালো! আমাকে সাহায্য করুন" target="_blank" style="position:fixed;bottom:20px;right:20px;font-size:32px;background:#25D366;color:#fff;border-radius:50%;padding:12px;text-align:center;text-decoration:none;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;">📱</a>
 
 </body>
 </html>
