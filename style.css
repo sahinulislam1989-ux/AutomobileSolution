@@ -122,3 +122,32 @@ footer {
   header img{height:60px;}
   .profile img{width:100px;}
 }
+/* শুধু ছবি সাইজ ঠিক করার জন্য */
+
+/* লোগো হেডারে */
+header img {
+    height: 60px;       /* লোগোর সাইজ */
+    width: auto;        /* প্রপোরশনাল রাখবে */
+    border-radius: 8px;
+    background: #fff;
+    padding: 6px;
+    object-fit: contain;
+}
+
+/* প্রোফাইল ছবি */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+/* সার্ভিস বক্সের ছবি */
+.service-box img {
+    width: 100%;        /* সার্ভিস বক্সের সাথে ফিট হবে */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
