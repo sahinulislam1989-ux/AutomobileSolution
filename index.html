@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -16,6 +16,120 @@
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#001f3f">
+  <style>
+    body {
+      font-family: "Noto Sans Bengali", Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 2px solid #ffcc00;
+    }
+    header .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    header .tag {
+      color: #ffcc00;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #001f3f;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      text-align: center;
+      color: #001f3f;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .services-list {
+      padding-left: 20px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 4px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .btn.map { background: #f44336; }
+    .btn.fb { background: #1877f2; }
+    .btn.pdf { background: #009688; }
+    .btn.call { background: #4caf50; }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+     }
 <style>
     :root{
       --brand:#001f3f;
