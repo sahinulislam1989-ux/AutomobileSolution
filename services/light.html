@@ -1,15 +1,130 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Light Vehicle Service | Automobile Solution</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css" />
   <style>
-    /* Back to Home button style */
+    body {
+      font-family: "Noto Sans Bengali", Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 2px solid #ffcc00;
+    }
+    header .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    header .tag {
+      color: #ffcc00;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #001f3f;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      text-align: center;
+      color: #001f3f;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .services-list {
+      padding-left: 20px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 4px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .btn.map { background: #f44336; }
+    .btn.fb { background: #1877f2; }
+    .btn.pdf { background: #009688; }
+    .btn.call { background: #4caf50; }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Back to Home Button */
     .back-home {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       background-color: #001f3f;
       color: white;
       padding: 8px 14px;
@@ -27,54 +142,27 @@
     .back-home span {
       margin-left: 6px;
     }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #001f3f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      flex-direction: column;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-      border-radius: 12px;
-      border: 2px solid #ffcc00;
-    }
-    header .title {
-      font-size: 36px;
-      font-weight: 800;
-    }
-    header .tag {
-      font-size: 18px;
-      color: #ffcc00;
-      margin-top: 5px;
-    }
   </style>
 </head>
-<body>
 
-  <!-- Header -->
+<body>
   <header>
-    <img src="../solution.jpeg" alt="Automobile Solution Logo">
+    <img src="../solution.jpeg" alt="Automobile Solution Logo" />
     <div class="title">🚗 Automobile Solution</div>
     <div class="tag">Multiple workshops — Ready to serve</div>
   </header>
 
-  <main class="wrap">
+  <main>
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
 
     <div class="grid">
       <!-- HRH Automobiles -->
       <article class="card">
-        <h3><img src="../hrh.jpg" alt="HRH Logo" width="200" height="200"> HRH Automobiles</h3>
+        <img src="../hrh.jpg" alt="HRH Logo" />
+        <h3>HRH Automobiles</h3>
         <p><strong>ঠিকানা:</strong> ক-২০/১, কুড়াতলী কুড়িল, খিলক্ষেত, ঢাকা-১২২৯</p>
         <p><strong>ফোন:</strong> 
-          <a class="btn call" href="tel:+8801970138816">01970-138816</a>, 
+          <a class="btn call" href="tel:+8801970138816">01970-138816</a>
           <a class="btn call" href="tel:+8801917360011">01917-360011</a>
         </p>
         <ul class="services-list">
@@ -84,7 +172,6 @@
           <li>এয়ার কন্ডিশন রিপেয়ার</li>
           <li>কার ওয়াশ</li>
           <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-          <li>বডি ড্রেন প্যান চেঞ্জ</li>
         </ul>
         <div class="buttons">
           <a class="btn map" href="https://maps.app.goo.gl/cuDVpgwzSvTP8Fnq8" target="_blank">📍 Google Map</a>
@@ -92,41 +179,15 @@
           <a class="btn pdf" href="hrh.pdf" target="_blank">📑 Profile PDF</a>
         </div>
       </article>
-
-      <!-- Auto Technic -->
-      <article class="card">
-        <h3><img src="../auto.jpeg" alt="Auto Logo" width="200" height="200"> Auto Technic</h3>
-        <p><strong>ঠিকানা:</strong> ক-৯৬/৪, কুড়িল বিশ্বরোড, ভাটারা, ঢাকা-১২২৯</p>
-        <p><strong>ফোন:</strong> 
-          <a class="btn call" href="tel:+8801685093636">01685-093636</a>, 
-          <a class="btn call" href="tel:+8801712369797">01712-369797</a>
-        </p>
-        <ul class="services-list">
-          <li>ইঞ্জিন মেরামত</li>
-          <li>ব্রেক সিস্টেম সার্ভিস</li>
-          <li>গিয়ার বক্স মেরামত</li>
-          <li>এয়ার কন্ডিশন রিপেয়ার</li>
-          <li>কার ওয়াশ</li>
-          <li>হাইব্রিড ব্যাটারি সার্ভিস</li>
-        </ul>
-        <div class="buttons">
-          <a class="btn map" href="https://maps.app.goo.gl/4t3yVQBYczpZNnd77" target="_blank">📍 Google Map</a>
-          <a class="btn fb" href="https://www.facebook.com/Autotechnic41" target="_blank">🌐 Facebook</a>
-          <a class="btn pdf" href="auto.pdf" target="_blank">📑 Profile PDF</a>
-        </div>
-      </article>
     </div>
 
-    <!-- Back to Home Button -->
-    <div style="text-align: center;">
+    <div style="text-align:center;">
       <a class="back-home" href="../index.html">🏠 <span>Back to Home</span></a>
     </div>
-
   </main>
 
   <footer>
     © 2025 Automobile Solution — All Rights Reserved
   </footer>
-
 </body>
 </html>
