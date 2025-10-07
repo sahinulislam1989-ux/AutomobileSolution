@@ -7,12 +7,170 @@
 <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automobile Solution</title>
 
-<header>
-  <h1>Light Service</h1>
-</header>
+  <!-- PWA manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#001f3f">
+<style>
+    :root{
+      --brand:#001f3f;
+      --accent:#0073e6;
+      --fb:#1877f2;
+      --map:#e74c3c;
+      --pdf:#8e44ad;
+      --call:#28a745;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Arial, sans-serif; margin:0; background:#f4f4f4; color:#222;}
+    header{background:var(--brand); color:#fff; padding:16px; text-align:center; display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap;}
+    header img{height:72px; border-radius:8px; background:#fff; padding:6px;}
+    header .title{font-size:22px; font-weight:700;}
+    .tag{color:#e6eefc; font-size:14px;}
+    .wrap{width:92%; max-width:1100px; margin:20px auto;}
+    h2.section-title{text-align:center; color:var(--brand); margin:22px 0;}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit, minmax(300px,1fr));}
+    .card{background:#fff; padding:16px; border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,0.06); border:1px solid rgba(0,0,0,0.03); color:#222;}
+    .card h3{margin:0 0 8px; display:flex; gap:10px; align-items:center; color:var(--accent);}
+    .card h3 img{width:44px; height:44px; object-fit:cover; border-radius:6px;}
+    .card p, .card li { color:#222; }
+    .services-list{padding-left:18px; margin:8px 0;}
+    .buttons{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;}
+    .btn{display:inline-block; padding:8px 12px; border-radius:6px; color:#fff; text-decoration:none; font-weight:600; font-size:14px;}
+    .btn.map{background:var(--map);}
+    .btn.fb{background:var(--fb);}
+    .btn.call{background:var(--call);}
+    .btn.pdf{background:var(--pdf);}
 
- <main class="wrap">
+   
+    }
+
+    section{padding:20px; margin-top:20px; background:#fff; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.06);}
+    footer{margin-top:26px; padding:18px; text-align:center; color:#fff; background:#222; font-size:14px;}
+
+    @media (max-width:420px){
+      header {padding:12px;}
+      .btn{font-size:13px; padding:7px 10px;}
+      header img{height:80px;}
+      .card h3 img{width:50px; height:50px;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="solution.jpeg" alt="Automobile Solution Logo">
+    <div>
+      <div class="title">🚗 Automobile Solution</div>
+      <div class="tag">Multiple workshops — Ready to serve</div>
+    </div>
+  </header>
+        <div class="buttons">
+          <a class="btn fb" href="https://www.facebook.com/share/17EkckTb3U/" target="_blank" rel="noopener">🌐 Facebook</a>
+      <div>
+     <!-- বিশেষ লেখার জন্য আলাদা ক্লাস -->
+<div class="sos-info">জরুরী প্রয়োজনে ডান পাসের মোবাইল চিহ্ন দেওয়া আইকনে  whatsapp মেসেঞ্জারে মাধ্যমে যোগাযোগ করুন।</div>
+
+ <style>
+  /* শুধু SOS তথ্যের জন্য */
+  .sos-info {
+    color: black;       /* লেখা কালো */
+    font-weight: 600;   /* গাঢ় করা */
+    font-size: 20px;    /* চাইলে আকার ঠিক করা */
+    margin-top: 10px;    /* হালকা ফাঁকা জায়গা */
+  }
+ </style>
+        
+<script>
+<!-- WhatsApp SOS Button -->
+<button id="sos-wa">WhatsApp SOS</button>
+  
+<script>
+<!-- Messenger Chat Plugin -->
+<div id="fb-root"></div>
+<div id="fb-customer-chat" class="fb-customerchat"></div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "100069418518261"); // আপনার Page ID
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<script>
+  // Facebook Messenger Chat plugin
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: 'v17.0'
+    });
+  };
+
+  (function(d, s, id){
+    let js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- WhatsApp Script -->
+<script>
+document.getElementById('sos-wa').onclick = () => {
+  let text = "🚨 SOS: গাড়ির জরুরি সমস্যা। সাহায্য দরকার!";
+  let whatsappNumber = "8801962419405"; // আপনার WhatsApp নাম্বার
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const { latitude, longitude } = pos.coords;
+      const locationLink = https://www.google.com/maps?q=${latitude},${longitude};
+      const msg = ${text}\n📍 লোকেশন: ${locationLink}\n☎️ কল: ${whatsappNumber};
+      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)};
+      window.open(waLink, '_blank');
+    }, _err => {
+      const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+      window.open(waLink, '_blank');
+    }, { enableHighAccuracy:true, timeout:8000 });
+  } else {
+    const waLink = https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)};
+    window.open(waLink, '_blank');
+  }
+};
+</script>
+
+<!-- Extra CSS for button -->
+<style>
+#sos-wa {
+  background: #25D366; 
+  color: white; 
+  padding: 12px 20px; 
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 9999;
+}
+#sos-wa:hover { background: #1eb346; }
+
+/* Messenger Icon floating */
+.fb-customerchat {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 9999;
+}
+</style>;
+</script>
+
+  <main class="wrap">
 
     <!-- Light Vehicle -->
     <h2 class="section-title">🚙 Light Vehicle Workshops</h2>
@@ -164,7 +322,7 @@
         <div class="buttons">
           <a class="btn map" href="https://maps.app.goo.gl/krzJj1qR7suXiZ7z5?g_st=aw" target="_blank" rel="noopener">📍 Google Map</a>
         </div>
-      </article>
+      </article> 
 
   <button onclick="window.location.href='../index.html'">Back to Home</button>
 </main>
