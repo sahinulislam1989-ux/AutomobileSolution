@@ -1,25 +1,223 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Other Services</title>
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light Vehicle Service | Automobile Solution</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: "Noto Sans Bengali", Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: 2px solid #ffcc00;
+    }
+    header .title {
+      font-size: 28px;
+      font-weight: bold;
+    }
+    header .tag {
+      color: #ffcc00;
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #001f3f;
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 200px;
+      display: block;
+      margin: 0 auto 10px;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      text-align: center;
+      color: #001f3f;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p, .card li {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .services-list {
+      padding-left: 20px;
+    }
+
+    .buttons {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 4px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .btn.map { background: #f44336; }
+    .btn.fb { background: #1877f2; }
+    .btn.pdf { background: #009688; }
+    .btn.call { background: #4caf50; }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Back to Home Button */
+    .back-home {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #001f3f;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      margin: 20px auto;
+      transition: all 0.3s ease;
+    }
+    .back-home:hover {
+      background-color: #ff9800;
+      transform: translateY(-2px);
+    }
+    .back-home span {
+      margin-left: 6px;
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <img src="../solution.jpeg" alt="Automobile Solution Logo" />
+    <div class="title">🚗 Automobile Solution</div>
+    <div class="tag">Multiple workshops — Ready to serve</div>
+  </header>
 
 <header>
   <h1>Other Services</h1>
 </header>
 
-<main class="wrap">
-  <p>অন্যান্য সার্ভিস সমূহ যেমন টায়ার, ব্যাটারি, ইলেকট্রিক্যাল ইত্যাদির বিস্তারিত তথ্য এখানে থাকবে।</p>
-  <div class="vehicle-info">
-    <h2>মডেল: Honda Civic</h2>
-    <p>ঠিকানা: Sylhet, Bangladesh</p>
-  </div>
-  <button onclick="window.location.href='../index.html'">Back to Home</button>
-</main>
+<!-- Other Services Section -->
+<h2 class="section-title">🛠️ Other Services</h2>
+<div class="grid">
+
+  <!-- Example Service 1 -->
+  <article class="card">
+    <h3><img src="../placeholder.jpeg" alt="Service Logo" width="200" height="200"> Example Service 1</h3>
+    <p><strong>ঠিকানা:</strong> Placeholder Address, City</p>
+    <p><strong>ফোন:</strong> 
+      <a class="btn call" href="tel:+8801234567890">01234-567890</a>
+    </p>
+    <ul class="services-list">
+      <li>Service 1 Description</li>
+      <li>Service 2 Description</li>
+      <li>Service 3 Description</li>
+    </ul>
+    <div class="buttons">
+      <a class="btn map" href="https://maps.google.com" target="_blank">📍 Google Map</a>
+      <a class="btn fb" href="https://facebook.com" target="_blank">🌐 Facebook</a>
+      <a class="btn pdf" href="../placeholder.pdf" target="_blank">📑 Profile PDF</a>
+    </div>
+  </article>
+
+  <!-- Example Service 2 -->
+  <article class="card">
+    <h3><img src="../placeholder.jpeg" alt="Service Logo" width="200" height="200"> Example Service 2</h3>
+    <p><strong>ঠিকানা:</strong> Placeholder Address, City</p>
+    <p><strong>ফোন:</strong> 
+      <a class="btn call" href="tel:+8801987654321">01987-654321</a>
+    </p>
+    <ul class="services-list">
+      <li>Service A Description</li>
+      <li>Service B Description</li>
+      <li>Service C Description</li>
+    </ul>
+    <div class="buttons">
+      <a class="btn map" href="https://maps.google.com" target="_blank">📍 Google Map</a>
+      <a class="btn fb" href="https://facebook.com" target="_blank">🌐 Facebook</a>
+      <a class="btn pdf" href="../placeholder.pdf" target="_blank">📑 Profile PDF</a>
+    </div>
+  </article>
+
+  <!-- Example Service 3 -->
+  <article class="card">
+    <h3><img src="../placeholder.jpeg" alt="Service Logo" width="200" height="200"> Example Service 3</h3>
+    <p><strong>ঠিকানা:</strong> Placeholder Address, City</p>
+    <p><strong>ফোন:</strong> 
+      <a class="btn call" href="tel:+8801712345678">01712-345678</a>
+    </p>
+    <ul class="services-list">
+      <li>Service X Description</li>
+      <li>Service Y Description</li>
+      <li>Service Z Description</li>
+    </ul>
+    <div class="buttons">
+      <a class="btn map" href="https://maps.google.com" target="_blank">📍 Google Map</a>
+      <a class="btn fb" href="https://facebook.com" target="_blank">🌐 Facebook</a>
+      <a class="btn pdf" href="../placeholder.pdf" target="_blank">📑 Profile PDF</a>
+    </div>
+  </article>
+
+</div> <!-- .grid -->
 
 <footer>© 2025 Automobile Solution</footer>
 </body>
